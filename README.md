@@ -8,7 +8,7 @@ Projet de jeu réalisé dans le cadre de la E3 à ESIEE Paris. Il s'agit d'un je
 
 ## 🎨 Assets
 - [Polygon Horror Mansion (Synty)](https://assetstore.unity.com/packages/3d/environments/fantasy/polygon-horror-mansion-low-poly-3d-art-by-synty-213346)
-![alt text](Resources\Images\HorrorMansion)
+![alt text](Resources\Images\HorrorMansion.webp)
 - [Starter Assets - FirstPerson | Updates in new CharacterController package](https://assetstore.unity.com/packages/essentials/starter-assets-firstperson-updates-in-new-charactercontroller-pa-196525)
 - [Starter Assets - ThirdPerson | Updates in new CharacterController package](https://assetstore.unity.com/packages/essentials/starter-assets-thirdperson-updates-in-new-charactercontroller-pa-196526)
 - [Cute Monster Ghost's FREE](https://assetstore.unity.com/packages/3d/characters/creatures/cute-monster-ghost-s-free-308550)
