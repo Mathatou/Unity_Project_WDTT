@@ -11,8 +11,17 @@ Projet de jeu réalisé dans le cadre de la E3 à ESIEE Paris. Il s'agit d'un je
 
 ![Horror Mansion](Resources/Images/HorrorMansion.png)
 - [Starter Assets - FirstPerson | Updates in new CharacterController package](https://assetstore.unity.com/packages/essentials/starter-assets-firstperson-updates-in-new-charactercontroller-pa-196525)
+
+![1st person controls](Resources/Images/1stPerson.png)
+
 - [Starter Assets - ThirdPerson | Updates in new CharacterController package](https://assetstore.unity.com/packages/essentials/starter-assets-thirdperson-updates-in-new-charactercontroller-pa-196526)
+
+![3rd Person controls](Resources/Images/3rdPerson.png)
+
 - [Cute Monster Ghost's FREE](https://assetstore.unity.com/packages/3d/characters/creatures/cute-monster-ghost-s-free-308550)
+
+![Ghosties](Resources/Images/Ghosts.png)
+
 
 **_A voir ce qu'on utilise ou pas, pas oublier de rajouter des images pour illustrer les assets_**
 
