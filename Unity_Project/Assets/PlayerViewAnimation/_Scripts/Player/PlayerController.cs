@@ -9,11 +9,15 @@ namespace UnityTutorial.PlayerControl
     public class PlayerController : MonoBehaviour
     {
         [SerializeField] private float AnimBlendSpeed = 8.9f;
+        [Header("Camera attributes")]
+        [Space]
         [SerializeField] private Transform CameraRoot;
         [SerializeField] private Transform Camera;
         [SerializeField] private float UpperLimit = -40f;
         [SerializeField] private float BottomLimit = 70f;
         [SerializeField] private float MouseSensitivity = 21.9f;
+        [Header("In air management")]
+        [Space]
         [SerializeField, Range(10, 500)] private float JumpFactor = 260f;
         [SerializeField] private float Dis2Ground = 0.8f;
         [SerializeField] private LayerMask GroundCheck;
