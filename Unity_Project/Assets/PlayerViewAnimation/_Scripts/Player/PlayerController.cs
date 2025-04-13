@@ -22,6 +22,7 @@ namespace UnityTutorial.PlayerControl
         [SerializeField] private float Dis2Ground = 0.8f;
         [SerializeField] private LayerMask GroundCheck;
         [SerializeField] private float AirResistance = 0.8f;
+        private float _airborneTimer = 0f;
         private Rigidbody _playerRigidbody;
         private InputManager _inputManager;
         private Animator _animator;
@@ -98,19 +99,26 @@ namespace UnityTutorial.PlayerControl
 
         private void CamMovements()
         {
-            if(!_hasAnimator) return;
+            if (!_hasAnimator) return;
 
             var Mouse_X = _inputManager.Look.x;
             var Mouse_Y = _inputManager.Look.y;
+
+            // Ensure CameraRoot is updated correctly
             Camera.position = CameraRoot.position;
-            
-            
+
+            // Update rotation based on mouse input
             _xRotation -= Mouse_Y * MouseSensitivity * Time.smoothDeltaTime;
             _xRotation = Mathf.Clamp(_xRotation, UpperLimit, BottomLimit);
 
-            Camera.localRotation = Quaternion.Euler(_xRotation, 0 , 0);
+            // Apply rotation to the camera
+            Camera.localRotation = Quaternion.Euler(_xRotation, 0, 0);
+
+            // Apply rotation to the player
             _playerRigidbody.MoveRotation(_playerRigidbody.rotation * Quaternion.Euler(0, Mouse_X * MouseSensitivity * Time.smoothDeltaTime, 0));
         }
+
+
 
         private void HandleCrouch() => _animator.SetBool(_crouchHash , _inputManager.Crouch);
 
