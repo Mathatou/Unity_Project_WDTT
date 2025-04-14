@@ -5,7 +5,7 @@ using UnityEngine;
 public class OpenDoor : MonoBehaviour
 {
     private Animator doorAnimator;
-
+    private bool isOpen;
 
     void Start()
     {
@@ -15,14 +15,13 @@ public class OpenDoor : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         // Check if the object entering the trigger is the player (or another specified object)
-        Debug.Log("Trigger entered is triggered");
         if (other.CompareTag("Player")) // Make sure the player GameObject has the tag "Player"
         {
             if (doorAnimator != null)
             {
-                Debug.Log("Player has entered the trigger zone. Triggering door animation.");
                 // Trigger the Door_Open animation
-                doorAnimator.SetTrigger("Door_Opening");
+                isOpen = !isOpen;
+                doorAnimator.SetBool("isOpen",isOpen);
             }
         }
     }
