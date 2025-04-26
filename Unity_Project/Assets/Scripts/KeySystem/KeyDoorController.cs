@@ -8,6 +8,8 @@ namespace KeySystem
     public class KeyDoorController : MonoBehaviour
     {
         private Animator doorAnim;
+        private HingeJoint Joint;
+        private Rigidbody doorRb;
         private bool doorOpen = false;
 
         [Header( "Animation Names" )]
@@ -27,15 +29,13 @@ namespace KeySystem
         private void Awake()
         {
             doorAnim = GetComponent<Animator>();
+            Joint = GetComponent<HingeJoint>();
+            doorRb = GetComponent<Rigidbody>();
+            doorRb.isKinematic = true; // Make the door kinematic to prevent physics interactions
+            Joint.useLimits = true;
+            Joint.limits = new JointLimits { min = 0, max = 0 }; // Door can't move initially
+            Joint.enableCollision = true;
         }
-
-        private IEnumerator PauseDoorInteraction()
-        {
-            pauseInteraction = true;
-            yield return new WaitForSeconds(waitTimer);
-            pauseInteraction = false;
-        }
-        
         private IEnumerator ShowDoorLocked()
         {
             showDoorLockedUI.SetActive( true );
@@ -43,24 +43,17 @@ namespace KeySystem
             showDoorLockedUI.SetActive( false );
         }
 
-        private void playOpenOrCloseAnim(string animName )
-        {
-            doorAnim.Play( animName, 0, 0.0f );
-            doorOpen = false;
-            StartCoroutine( PauseDoorInteraction() );
-        }
         public void doorOpeningClosing()
         {
             if( _inventory.hasKey )
             {
-                if( !doorOpen && !pauseInteraction )
-                {
-                    playOpenOrCloseAnim( openAnimationName );
-                }
-                else if( doorOpen && !pauseInteraction )
-                {
-                    playOpenOrCloseAnim( closeAnimationName );
-                }
+                Joint.useLimits = false;
+                Joint.limits = new JointLimits { min = -90, max = 0 }; // Door can move to open position
+                Joint.enableCollision = false;
+                doorRb.isKinematic = false; // To allow physics interactions
+
+
+                doorOpen = true;
             }
             else
             {

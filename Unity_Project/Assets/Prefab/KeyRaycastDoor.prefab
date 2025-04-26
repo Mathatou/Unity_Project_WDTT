@@ -375,7 +375,8 @@ PrefabInstance:
       propertyPath: _inventory
       value: 
       objectReference: {fileID: 3255611504859409738}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2225743261903431919, guid: 6645d9102909cf749b24a50b71b5bb81, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
