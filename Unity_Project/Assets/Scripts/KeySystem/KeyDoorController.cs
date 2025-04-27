@@ -12,9 +12,9 @@ namespace KeySystem
         private Rigidbody doorRb;
         private bool doorOpen = false;
 
-        [Header( "Animation Names" )]
+        /*[Header( "Animation Names" )]
         [SerializeField] private string openAnimationName = "DoorOpen";
-        [SerializeField] private string closeAnimationName = "DoorClose";
+        [SerializeField] private string closeAnimationName = "DoorClose";*/
 
         [SerializeField] private int timeToShowUI = 1;
         [SerializeField] private GameObject showDoorLockedUI = null;
