@@ -13,3 +13,6 @@ Rajouter du son aussi, les trouver sur internet ?
 Les faire nous mêmes avec instrument ? => Je pense que c'est pas efficace
 
 // -- Les portes
+
+// Ce mec à fait des effets sympa qui pourraient être utilisés
+https://github.com/keijiro/KinoGlitch
