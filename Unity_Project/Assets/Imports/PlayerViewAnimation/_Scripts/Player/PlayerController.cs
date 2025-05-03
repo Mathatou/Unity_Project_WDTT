@@ -22,7 +22,6 @@ namespace UnityTutorial.PlayerControl
         [SerializeField] private float Dis2Ground = 0.8f;
         [SerializeField] private LayerMask GroundCheck;
         [SerializeField] private float AirResistance = 0.8f;
-        private float _airborneTimer = 0f;
         private Rigidbody _playerRigidbody;
         private InputManager _inputManager;
         private Animator _animator;

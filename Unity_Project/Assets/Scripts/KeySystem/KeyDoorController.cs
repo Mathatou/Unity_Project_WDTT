@@ -10,21 +10,17 @@ namespace KeySystem
         private Animator doorAnim;
         private HingeJoint Joint;
         private Rigidbody doorRb;
-        private bool doorOpen = false;
 
         /*[Header( "Animation Names" )]
         [SerializeField] private string openAnimationName = "DoorOpen";
         [SerializeField] private string closeAnimationName = "DoorClose";*/
 
-        [SerializeField] private int timeToShowUI = 1;
         [SerializeField] private GameObject showDoorLockedUI = null;
 
 
         [SerializeField] private KeyInventory _inventory = null;
 
         [SerializeField] private int waitTimer = 1;
-        [SerializeField] private bool pauseInteraction = false;
-
 
         private void Awake()
         {
@@ -51,9 +47,6 @@ namespace KeySystem
                 Joint.limits = new JointLimits { min = -90, max = 0 }; // Door can move to open position
                 Joint.enableCollision = false;
                 doorRb.isKinematic = false; // To allow physics interactions
-
-
-                doorOpen = true;
             }
             else
             {
