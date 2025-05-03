@@ -23,13 +23,24 @@ public class KeyItemController : MonoBehaviour
         }
 
     }
-    private IEnumerator ShowItemPicked()
+    /// <summary>
+    /// Cette fonction va afficher un texte lorsque le joueur ramasse un objet.
+    /// Il va attendre que le texte parte (1s) avant de le cacher (le récuperer).
+    /// </summary>
+    /// <returns></returns>
+    private IEnumerator ShowItemPickedAndDeactivates()
     {
+        // Gestion de la récupération de l'objet et de la visibilité du txt
+        _keyInventory.hasKey = true;
         showItemPickedUI.SetActive( true );
         yield return new WaitForSeconds( waitTimer );
+        // Désactivation de l'objet et du txt
         showItemPickedUI.SetActive( false );
+        gameObject.SetActive(false);
     }
-
+    /// <summary>
+    /// 
+    /// </summary>
     public void ObjectInteraction()
     {
         if( LockedDoor )
@@ -38,9 +49,7 @@ public class KeyItemController : MonoBehaviour
         }
         else if (Key)
         {
-            _keyInventory.hasKey = true;
-
-            gameObject.SetActive(false);
+            StartCoroutine(ShowItemPickedAndDeactivates());
         }
     }
 
