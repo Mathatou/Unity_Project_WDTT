@@ -6,6 +6,7 @@ public class PauseMenuController : MonoBehaviour
 {
     public static bool GameIsPaused = false;
     [SerializeField] private GameObject pauseMenuUI; // Reference to the pause menu UI
+    [SerializeField] private GameObject manualUI; // Reference to the manual UI
 
     private void Update()
     {
@@ -15,7 +16,7 @@ public class PauseMenuController : MonoBehaviour
         }
     }
     
-    public void quitGame()
+    public void QuitGame()
     {
 #if UNITY_EDITOR
         // If we are in the editor, stop playing
@@ -26,7 +27,6 @@ public class PauseMenuController : MonoBehaviour
         Application.Quit();
 #endif
     }
-
     public void TogglePauseMenu()
     {
         GameIsPaused = !GameIsPaused; // Switch the game state
@@ -44,4 +44,16 @@ public class PauseMenuController : MonoBehaviour
             Cursor.visible = false;
         }
     }
+
+    public void ToggleManual()
+    {
+        pauseMenuUI.SetActive(false); // Show / Hide the pause menu UI
+        manualUI.SetActive(true); // Show / Hide the manual UI
+    }
+    public void BackToMenu()
+    {
+        pauseMenuUI.SetActive(true); // Show / Hide the pause menu UI
+        manualUI.SetActive(false); // Show / Hide the manual UI
+    }
+
 }
