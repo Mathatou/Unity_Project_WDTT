@@ -4,7 +4,7 @@ using KeySystem;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class KeyItemController : MonoBehaviour
+public class KeyItemController : ObjectInteractionController
 {
     [SerializeField] private bool LockedDoor = false;
     [SerializeField] private bool Key = false;
@@ -41,9 +41,9 @@ public class KeyItemController : MonoBehaviour
     /// <summary>
     /// 
     /// </summary>
-    public void ObjectInteraction()
+    public override void ObjectInteraction()
     {
-        if( LockedDoor )
+        if ( LockedDoor )
         {
             doorObject.doorOpeningClosing();
         }
