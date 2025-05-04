@@ -6,6 +6,7 @@ TagManager:
   tags:
   - pickup
   - InteractiveObject
+  - NPC
   layers:
   - Default
   - TransparentFX
