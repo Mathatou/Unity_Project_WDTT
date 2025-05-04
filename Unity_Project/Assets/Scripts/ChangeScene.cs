@@ -15,6 +15,14 @@ public class ChangeScene : MonoBehaviour
         {
             SceneManager.LoadScene(sceneName);
         }
-    }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
 
+            skipCinematic();
+        }
+    }
+    void skipCinematic()
+    {
+        changeTime = 0;
+    }
 }
