@@ -53,10 +53,5 @@ namespace KeySystem
                 StartCoroutine( ShowDoorLocked() );
             }
         }
-
-
-
-
-
     }
 }
