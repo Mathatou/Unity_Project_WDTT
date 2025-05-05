@@ -10,6 +10,7 @@ public class NPCInteractionController : ObjectInteractionController
     [SerializeField] private AudioSource _AudioSource;
 
     // This method will be called when the player interacts with the NPC
+    // It will play a sound and log a message to the console
     public override void ObjectInteraction()
     {
         if(_AudioSource.isPlaying)
