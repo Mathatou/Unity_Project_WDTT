@@ -8,12 +8,22 @@ public class PauseMenuController : MonoBehaviour
     [SerializeField] private GameObject pauseMenuUI; // Reference to the pause menu UI
     [SerializeField] private GameObject manualUI; // Reference to the manual UI
     [SerializeField] private GameObject RTFM_UI; // Reference to the text indicating to read the manual 
+    private bool isInManualMode = false;
+
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            TogglePauseMenu();
-            RTFM_UI.SetActive(false); // Hide the "Read the manual" text when the pause menu is opened
+            if (!isInManualMode)
+            {
+                TogglePauseMenu();
+                RTFM_UI.SetActive(false); // Hide the "Read the manual" text when the pause menu is opened
+            }
+            else
+            {
+                BackToMenu();
+            }
         }
     }
     
@@ -49,6 +59,7 @@ public class PauseMenuController : MonoBehaviour
     public void ToggleManual()
     {
         pauseMenuUI.SetActive(false); // Show / Hide the pause menu UI
+        isInManualMode = true; // Switch the game state
         manualUI.SetActive(true); // Show / Hide the manual UI
     }
     public void BackToMenu()
