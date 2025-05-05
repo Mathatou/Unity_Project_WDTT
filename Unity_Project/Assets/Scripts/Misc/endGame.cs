@@ -10,7 +10,8 @@ public class endGame : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            //SceneManager.LoadScene("EndCinematic");
+            SceneManager.LoadScene("EndGame");
+            /*
 #if UNITY_EDITOR
             UnityEditor.EditorApplication.isPlaying = false;
 #else
@@ -19,6 +20,7 @@ public class endGame : MonoBehaviour
             // Add your game over logic here, such as loading a game over scene or displaying a game over UI.
             // For example:
             // SceneManager.LoadScene("GameOverScene");
+            */
         }
     }
 }
