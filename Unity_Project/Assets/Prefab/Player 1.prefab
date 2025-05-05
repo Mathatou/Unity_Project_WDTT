@@ -569,7 +569,7 @@ Animator:
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 897b34267f422c1499700402763d096e, type: 3}
   m_Controller: {fileID: 9100000, guid: 8fc53f75f2322414482947e857bafd00, type: 2}
-  m_CullingMode: 1
+  m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
@@ -708,7 +708,6 @@ MonoBehaviour:
   UpperLimit: -40
   BottomLimit: 70
   MouseSensitivity: 20
-  JumpFactor: 260
   Dis2Ground: 0.8
   GroundCheck:
     serializedVersion: 2
@@ -1012,6 +1011,8 @@ GameObject:
   - component: {fileID: 3827397217266156273}
   - component: {fileID: 8392661441139592708}
   - component: {fileID: 1715938337993458834}
+  - component: {fileID: 5124905157041056197}
+  - component: {fileID: 3163931347333423822}
   m_Layer: 7
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1138,6 +1139,38 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+--- !u!114 &5124905157041056197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3749886164763329420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a953199004946494dab402a1fca422c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rayLength: 3
+  InteractionLayerMask:
+    serializedVersion: 2
+    m_Bits: 256
+  excluseLayerName: 
+  openDoorKey: 323
+--- !u!114 &3163931347333423822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3749886164763329420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd4a6039481bc4541a53c6db7ce2e9db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _clip1: {fileID: 0}
+  _AudioSource: {fileID: 0}
 --- !u!1 &3903054393480825847
 GameObject:
   m_ObjectHideFlags: 0
