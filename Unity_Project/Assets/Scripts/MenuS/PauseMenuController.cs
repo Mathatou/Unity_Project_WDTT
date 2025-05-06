@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PauseMenuController : MonoBehaviour
+public class PauseMenuController : MenuController
 {
     public static bool GameIsPaused = false;
     [SerializeField] private GameObject pauseMenuUI; // Reference to the pause menu UI
@@ -25,18 +25,6 @@ public class PauseMenuController : MonoBehaviour
                 BackToMenu();
             }
         }
-    }
-    
-    public void QuitGame()
-    {
-#if UNITY_EDITOR
-        // If we are in the editor, stop playing
-        UnityEditor.EditorApplication.isPlaying = false;
-#else
-        // If we are in a build, quit the application
-        
-        Application.Quit();
-#endif
     }
     public void TogglePauseMenu()
     {
