@@ -5,22 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class endGame : MonoBehaviour
 {
-
+    /// <summary> When the zone is triggered, change to the endGame Scene which is a cutscene </summary>
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
             SceneManager.LoadScene("EndGame");
-            /*
-#if UNITY_EDITOR
-            UnityEditor.EditorApplication.isPlaying = false;
-#else
-            Application.Quit();
-#endif
-            // Add your game over logic here, such as loading a game over scene or displaying a game over UI.
-            // For example:
-            // SceneManager.LoadScene("GameOverScene");
-            */
         }
     }
 }
