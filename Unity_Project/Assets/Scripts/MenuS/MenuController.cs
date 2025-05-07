@@ -2,8 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Parent class to other menu scripts
+/// </summary>
 public class MenuController : MonoBehaviour
 {
+    /// <summary>
+    /// Quit game wether we are in editor or build mode
+    /// </summary>
     public void QuitGame()
     {
 #if UNITY_EDITOR

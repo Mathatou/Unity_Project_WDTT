@@ -8,14 +8,14 @@ public class PauseMenuController : MenuController
     [SerializeField] private GameObject pauseMenuUI; // Reference to the pause menu UI
     [SerializeField] private GameObject manualUI; // Reference to the manual UI
     [SerializeField] private GameObject RTFM_UI; // Reference to the text indicating to read the manual 
-    private bool isInManualMode = false;
+    private bool doWeReadManual = false;
 
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (!isInManualMode)
+            if (!doWeReadManual)
             {
                 TogglePauseMenu();
                 RTFM_UI.SetActive(false); // Hide the "Read the manual" text when the pause menu is opened
@@ -26,6 +26,9 @@ public class PauseMenuController : MenuController
             }
         }
     }
+    /// <summary>
+    /// This method allows to display or hide the pause menu
+    /// </summary>
     public void TogglePauseMenu()
     {
         GameIsPaused = !GameIsPaused; // Switch the game state
@@ -43,13 +46,18 @@ public class PauseMenuController : MenuController
             Cursor.visible = false;
         }
     }
-
-    public void ToggleManual()
+    /// <summary>
+    /// Show / Hide the manualUI in the pause menu
+    /// </summary>
+    public void ReadManual()
     {
         pauseMenuUI.SetActive(false); // Show / Hide the pause menu UI
-        isInManualMode = true; // Switch the game state
+        doWeReadManual = true; // Switch the game state
         manualUI.SetActive(true); // Show / Hide the manual UI
     }
+    /// <summary>
+    /// Go back from Manual menu to Pause menu
+    /// </summary>
     public void BackToMenu()
     {
         pauseMenuUI.SetActive(true); // Show / Hide the pause menu UI
