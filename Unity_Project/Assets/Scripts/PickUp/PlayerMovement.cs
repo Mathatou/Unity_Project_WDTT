@@ -15,8 +15,12 @@ public class PlayerMovement : MonoBehaviour
 
         // Check if the player is walking or not and call the appropriate methods
         bool isWalking = Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0;
-
-        if (isWalking)
+        bool isRunning = Input.GetKey(KeyCode.LeftShift) && isWalking;
+        if (isRunning)
+        {
+            footstepController.StartRunning();
+        }
+        else if (isWalking)
         {
             footstepController.StartWalking();
         }
