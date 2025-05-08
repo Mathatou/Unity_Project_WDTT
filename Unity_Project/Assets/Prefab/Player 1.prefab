@@ -303,7 +303,7 @@ GameObject:
   - component: {fileID: 169354796725377096}
   m_Layer: 7
   m_Name: Geometry
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -532,6 +532,7 @@ GameObject:
   - component: {fileID: 5338234750116734203}
   - component: {fileID: 1074306696250097210}
   - component: {fileID: 8248413928070602507}
+  - component: {fileID: 7754928321617671617}
   m_Layer: 7
   m_Name: Player 1
   m_TagString: Player
@@ -713,6 +714,22 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   AirResistance: 0.8
+--- !u!114 &7754928321617671617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1812136874074637234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3234a45125f057745a9489174cc8f03f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  footstepSounds:
+  - {fileID: 8300000, guid: b49d7fb94f993ba48855c28b825406e1, type: 3}
+  minTimeBetweenFootsteps: 0.3
+  maxTimeBetweenFootsteps: 0.6
 --- !u!1 &1845900537569496113
 GameObject:
   m_ObjectHideFlags: 0
@@ -756,7 +773,7 @@ GameObject:
   - component: {fileID: 1953240842546369915}
   m_Layer: 0
   m_Name: Root
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1012,7 +1029,6 @@ GameObject:
   - component: {fileID: 8392661441139592708}
   - component: {fileID: 1715938337993458834}
   - component: {fileID: 5124905157041056197}
-  - component: {fileID: 3163931347333423822}
   m_Layer: 7
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1157,20 +1173,6 @@ MonoBehaviour:
     m_Bits: 256
   excluseLayerName: 
   openDoorKey: 323
---- !u!114 &3163931347333423822
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3749886164763329420}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd4a6039481bc4541a53c6db7ce2e9db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _clip1: {fileID: 0}
-  _AudioSource: {fileID: 0}
 --- !u!1 &3903054393480825847
 GameObject:
   m_ObjectHideFlags: 0
