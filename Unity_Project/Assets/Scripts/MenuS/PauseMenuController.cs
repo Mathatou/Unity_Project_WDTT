@@ -8,9 +8,21 @@ public class PauseMenuController : MenuController
     [SerializeField] private GameObject pauseMenuUI; // Reference to the pause menu UI
     [SerializeField] private GameObject manualUI; // Reference to the manual UI
     [SerializeField] private GameObject RTFM_UI; // Reference to the text indicating to read the manual 
+    [SerializeField] private AudioClip theme; // Glisser l'audio ici dans l'inspecteur
+    private AudioSource audioSource;
     private bool doWeReadManual = false;
 
+    public void Start()
+    {
+        audioSource = gameObject.AddComponent<AudioSource>();
+        audioSource.clip = theme;
+        audioSource.loop = true;
+        audioSource.playOnAwake = false;
+        audioSource.spatialBlend = 0f; // 0 = 2D, 1 = 3D
+        audioSource.volume = 0.6f;
 
+        audioSource.Play();
+    }
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -38,11 +50,13 @@ public class PauseMenuController : MenuController
         if (GameIsPaused)
         {
             Cursor.lockState = CursorLockMode.None;
+            audioSource.Pause();
             Cursor.visible = true;
         }
         else
         {
             Cursor.lockState = CursorLockMode.Locked;
+            audioSource.Play();
             Cursor.visible = false;
         }
     }
