@@ -9,25 +9,37 @@ public class ChangeScene : MonoBehaviour
     [SerializeField] private float changeTime;
     /// <summary> Name of the scene we want to change to </summary>
     [SerializeField] private string sceneName;
+    /// <summary> PlayableDirector to play the cutscene </summary>
+    [SerializeField] private PlayableDirector cutscene;
 
+    private void Start()
+    {
+
+        cutscene.stopped += OnCinematicEnd;
+
+    }
     private void Update()
     {
-        changeTime -= Time.deltaTime;
-        if (changeTime <= 0)
-        {
-            SceneManager.LoadScene(sceneName);
-        }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             skipCinematic();
         }
     }
     /// <summary>
-    /// Skip the cinmatic by changing changeTime to 0.
-    /// It surely can be done in a better way, but it works in this case ( changing scene ) 
+    /// Skip the cinmatic stopping it and loading the next scene
     /// </summary>
     void skipCinematic()
     {
-        changeTime = 0;
+        // Arrête la timeline et charge la scène suivante
+        cutscene.Stop();
+        LoadNextScene();
+    }
+    void OnCinematicEnd(PlayableDirector director)
+    {
+        LoadNextScene();
+    }
+    void LoadNextScene()
+    {
+        SceneManager.LoadScene(sceneName);
     }
 }
