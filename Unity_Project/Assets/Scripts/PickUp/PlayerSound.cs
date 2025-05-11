@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerSound : MonoBehaviour
 {
     private FootstepController footstepController;
 
