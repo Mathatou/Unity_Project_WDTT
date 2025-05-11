@@ -10,7 +10,7 @@ public class MenuController : MonoBehaviour
     /// <summary>
     /// Quit game wether we are in editor or build mode
     /// </summary>
-    public void QuitGame()
+    public static void QuitGame()
     {
 #if UNITY_EDITOR
         // If we are in the editor, stop playing

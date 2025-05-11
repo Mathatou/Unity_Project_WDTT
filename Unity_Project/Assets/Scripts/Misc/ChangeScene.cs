@@ -12,11 +12,12 @@ public class ChangeScene : MonoBehaviour
     /// <summary> PlayableDirector to play the cutscene </summary>
     [SerializeField] private PlayableDirector cutscene;
 
+    [SerializeField] private bool isLastCutscene = false;
+
+
     private void Start()
     {
-
         cutscene.stopped += OnCinematicEnd;
-
     }
     private void Update()
     {
@@ -30,16 +31,25 @@ public class ChangeScene : MonoBehaviour
     /// </summary>
     void skipCinematic()
     {
+        quitLastCinematic();
         // Arrête la timeline et charge la scène suivante
         cutscene.Stop();
         LoadNextScene();
     }
     void OnCinematicEnd(PlayableDirector director)
     {
+        quitLastCinematic();
         LoadNextScene();
     }
     void LoadNextScene()
     {
         SceneManager.LoadScene(sceneName);
+    }
+    void quitLastCinematic()
+    {
+        if (isLastCutscene)
+        {
+            MenuController.QuitGame();
+        }
     }
 }
