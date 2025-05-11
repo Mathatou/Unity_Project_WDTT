@@ -74,6 +74,7 @@ namespace UnityTutorial.PlayerControl
 
         private void LateUpdate()
         {
+            if(CameraRoot == null) return;
             CamMovements();    // Handle camera rotation
         }
 
