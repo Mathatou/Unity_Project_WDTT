@@ -4,7 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class KeyRaycast : MonoBehaviour
+public class ObjectRaycast : MonoBehaviour
 {
     // Distance the raycast will check for objects
     [SerializeField] private int rayLength = 5;
@@ -19,7 +19,7 @@ public class KeyRaycast : MonoBehaviour
     private ObjectInteractionController _raycastedObject;
 
     // Key used to trigger the interaction (default: left mouse click)
-    [SerializeField] private KeyCode openDoorKey = KeyCode.Mouse0;
+    [SerializeField] private KeyCode InteractionInput = KeyCode.Mouse0;
 
     // Tracks if the crosshair (or interaction state) is active
     private bool isCrossHairActive;
@@ -57,7 +57,7 @@ public class KeyRaycast : MonoBehaviour
                 doOnce = true;
 
                 // If the interaction key is pressed, perform the interaction
-                if (Input.GetKeyDown(openDoorKey))
+                if (Input.GetKeyDown(InteractionInput))
                 {
                     _raycastedObject.ObjectInteraction();
                 }

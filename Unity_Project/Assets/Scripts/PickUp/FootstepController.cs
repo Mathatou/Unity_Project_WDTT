@@ -26,14 +26,14 @@ public class FootstepController : MonoBehaviour
             // Determine the time range based on whether the player is walking or running
             float minTime = isRunning ? minTimeBetweenRunningSteps : minTimeBetweenFootsteps;
             float maxTime = isRunning ? maxTimeBetweenRunningSteps : maxTimeBetweenFootsteps;
-            if (isRunning)
-            {
-                Debug.Log($"Running --- minTime : {minTime} --- maxTime : {maxTime}");
-            }
-            else
-            {
-                Debug.Log($"Walking --- minTime : {minTime} --- maxTime : {maxTime}");
-            }
+            //if (isRunning)
+            //{
+            //    Debug.Log($"Running --- minTime : {minTime} --- maxTime : {maxTime}");
+            //}
+            //else
+            //{
+            //    Debug.Log($"Walking --- minTime : {minTime} --- maxTime : {maxTime}");
+            //}
             // Check if enough time has passed to play the next footstep sound
             if (Time.time - timeSinceLastFootstep >= Random.Range(minTime, maxTime))
             {
