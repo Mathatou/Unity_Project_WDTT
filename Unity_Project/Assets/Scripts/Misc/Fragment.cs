@@ -6,27 +6,28 @@ public class Fragment : ObjectInteractionController
 {
     private int fragmentCollected;
     [SerializeField] private NPCInteractionController _Generator;
+    private bool allCollected = false;
 
     // Update is called once per frame
     void Update()
     {
-        if (AllFragmentsAreCollected())
+        if (AllFragmentsAreCollected() && !allCollected)
         {
+            allCollected = true;
             Debug.Log("All fragments collected");
-            _Generator.finalGeneration();
         }
-        else
+        else if (!allCollected && FragmentGenerator.numberToCollect > 0)
         {
-            Debug.Log("Fragments collected: " + fragmentCollected);
+            Debug.Log("Fragment remaining to collect : " + FragmentGenerator.numberToCollect);
         }
     }
     private bool AllFragmentsAreCollected()
     {
-        return fragmentCollected == NPCInteractionController.numberToCollect;
+        return fragmentCollected >= FragmentGenerator.numberToCollect;
     }
     public override void ObjectInteraction()
     {
-
-        base.ObjectInteraction();
+        FragmentGenerator.numberToCollect--;
+        Debug.Log($"Fragment number {fragmentCollected} collected");
     }
 }

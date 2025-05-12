@@ -16,7 +16,7 @@ public class FragmentGenerator : MonoBehaviour
     private int[] randomIndex;
     public static int numberToCollect = 5;
     // Start is called before the first frame update
-    public void SpawnFragments()
+    public void Start()
     {
         randomIndex = new int[numberToSpawn];
         for (int i = 0; i < numberToSpawn; i++)
@@ -51,6 +51,7 @@ public class FragmentGenerator : MonoBehaviour
     }
     public void finalGeneration()
     {
+        Debug.Log("Final key generated at : " + finaltransform.transform.position);
         Instantiate(finalkey, finaltransform.transform);
     }
 }
