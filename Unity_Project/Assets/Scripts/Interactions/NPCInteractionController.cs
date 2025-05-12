@@ -52,6 +52,7 @@ public class NPCInteractionController : ObjectInteractionController
     {
         if (!IsAlreadyClicked)
         {
+            Debug.Log("Dialog Triggered");
             IsAlreadyClicked = true;
             SpawnFragments();
             _playableDirector.Play();

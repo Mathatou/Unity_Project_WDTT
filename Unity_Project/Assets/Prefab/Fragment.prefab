@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3690503397952978498}
   - component: {fileID: 5732326942856998923}
   - component: {fileID: 5442518645923119153}
+  - component: {fileID: 536862929919570811}
   m_Layer: 8
   m_Name: Fragment
   m_TagString: InteractiveObject
@@ -120,6 +121,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5057bec23b5123243825b869d484f84b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _Generator: {fileID: 0}
+--- !u!114 &536862929919570811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5252846510336722206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84652462a1b89554e838fa12dd801c4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aRotationSpeed: 0.2
 --- !u!1001 &6187991694420119524
 PrefabInstance:
   m_ObjectHideFlags: 0

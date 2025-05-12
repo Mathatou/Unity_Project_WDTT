@@ -5,30 +5,25 @@ using UnityEngine;
 public class Fragment : ObjectInteractionController
 {
     private int fragmentCollected;
-<<<<<<< Updated upstream
     [SerializeField] private NPCInteractionController _Generator;
+    private bool allCollected = false;
 
-=======
->>>>>>> Stashed changes
     // Update is called once per frame
     void Update()
     {
-        if (AllFragmentsAreCollected())
+        if (AllFragmentsAreCollected() && !allCollected)
         {
+            allCollected = true;
             Debug.Log("All fragments collected");
         }
-        else
+        else if (!allCollected && FragmentGenerator.numberToCollect > 0)
         {
             Debug.Log("Fragment remaining to collect : " + FragmentGenerator.numberToCollect);
         }
     }
     private bool AllFragmentsAreCollected()
     {
-<<<<<<< Updated upstream
-        return fragmentCollected == NPCInteractionController.numberToCollect;
-=======
         return fragmentCollected >= FragmentGenerator.numberToCollect;
->>>>>>> Stashed changes
     }
     public override void ObjectInteraction()
     {

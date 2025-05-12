@@ -51,6 +51,7 @@ public class FragmentGenerator : MonoBehaviour
     }
     public void finalGeneration()
     {
+        Debug.Log("Final key generated at : " + finaltransform.transform.position);
         Instantiate(finalkey, finaltransform.transform);
     }
 }
