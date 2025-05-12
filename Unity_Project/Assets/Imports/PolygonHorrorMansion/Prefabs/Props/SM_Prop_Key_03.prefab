@@ -13,9 +13,11 @@ GameObject:
   - component: {fileID: 23215934233515000}
   - component: {fileID: 64230242602864592}
   - component: {fileID: 446896672821583038}
-  m_Layer: 0
+  - component: {fileID: 448333150049838521}
+  - component: {fileID: 4086502706607488728}
+  m_Layer: 8
   m_Name: SM_Prop_Key_03
-  m_TagString: Untagged
+  m_TagString: InteractiveObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -120,3 +122,41 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   aRotationSpeed: 0.5
+--- !u!114 &448333150049838521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1107530047131676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e757997fd94697a4197bcd744ed4013b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LockedDoor: 0
+  Key: 1
+  _keyInventory: {fileID: 0}
+  showItemPickedUI: {fileID: 0}
+  waitTimer: 1
+--- !u!65 &4086502706607488728
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1107530047131676}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.02360116, y: 0.071055606, z: 0.23481643}
+  m_Center: {x: 0, y: -0.0018349439, z: 0.08099024}
