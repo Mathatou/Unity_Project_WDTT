@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 651161270158535219}
   - component: {fileID: 3690503397952978498}
   - component: {fileID: 5732326942856998923}
-  m_Layer: 0
+  - component: {fileID: 7936826534173003873}
+  m_Layer: 8
   m_Name: Fragment
-  m_TagString: Untagged
+  m_TagString: InteractiveObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 5252846510336722206}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 8.37, y: 1.441, z: -2.411}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -107,6 +108,18 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 43016882441064336, guid: 6b3346dcbeec2b544ae70805c191957c, type: 2}
+--- !u!114 &7936826534173003873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5252846510336722206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09c1de0e3deca72488394bbdf7bc22fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6187991694420119524
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -118,6 +131,10 @@ PrefabInstance:
     - target: {fileID: 1020104970719730, guid: 2a3d1ba408984524499450c244373d15, type: 3}
       propertyPath: m_Name
       value: FX_SunBeam_Small_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1020104970719730, guid: 2a3d1ba408984524499450c244373d15, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4331991690118006, guid: 2a3d1ba408984524499450c244373d15, type: 3}
       propertyPath: m_LocalPosition.x
