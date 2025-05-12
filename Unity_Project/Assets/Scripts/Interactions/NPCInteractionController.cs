@@ -19,6 +19,8 @@ public class NPCInteractionController : ObjectInteractionController
     [SerializeField] private GameObject[] spawnLocation;
     [SerializeField] private GameObject fragmentToSpawn;
     [SerializeField] private int numberToSpawn;
+    private bool isSpawned = false;
+
 
     [SerializeField] private GameObject finalkey;
     [SerializeField] private GameObject finaltransform;
@@ -28,6 +30,7 @@ public class NPCInteractionController : ObjectInteractionController
     // Start is called before the first frame update
     public void SpawnFragments()
     {
+
         randomIndex = new int[numberToSpawn];
         for (int i = 0; i < numberToSpawn; i++)
         {
@@ -47,11 +50,23 @@ public class NPCInteractionController : ObjectInteractionController
             Instantiate(fragmentToSpawn, spawnLocation[randomIndex[i]].transform);
         }
     }
+    private void Update()
+    {
+        if (!isSpawned)
+        {
+            if (numberToCollect <= 0)
+            {
+                Debug.Log("All fragments collected");
+                finalGeneration();
+                isSpawned = true;
+            }
+        }
+    }
 
     public override void ObjectInteraction()
     {
         if (!IsAlreadyClicked)
-        {
+        { 
             IsAlreadyClicked = true;
             SpawnFragments();
             _playableDirector.Play();
