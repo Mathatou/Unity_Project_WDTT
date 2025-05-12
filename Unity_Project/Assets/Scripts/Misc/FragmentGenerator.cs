@@ -15,7 +15,7 @@ public class FragmentGenerator : MonoBehaviour
     private int[] randomIndex;
     public static int numberToCollect = 5;
     // Start is called before the first frame update
-    void Start()
+    public void SpawnFragments()
     {
         randomIndex = new int[numberToSpawn];
         for (int i = 0; i < numberToSpawn; i++)
