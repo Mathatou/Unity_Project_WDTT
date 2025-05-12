@@ -48,6 +48,9 @@ public class NPCInteractionController : ObjectInteractionController
         if (!IsAlreadyClicked)
         {
             IsAlreadyClicked = true;
+            SpawnFragments();
+            _playableDirector.Play();
+            _AudioSource.PlayOneShot(_clip1);
         }
         
         if (_playableDirector.state == PlayState.Playing)
