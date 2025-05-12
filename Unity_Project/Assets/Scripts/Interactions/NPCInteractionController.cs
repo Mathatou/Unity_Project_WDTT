@@ -16,11 +16,11 @@ public class NPCInteractionController : ObjectInteractionController
     public override void ObjectInteraction()
     {
         
-        if (_AudioSource.isPlaying)
+        if (_playableDirector.state == PlayState.Playing)
         {
             _AudioSource.Stop();
             _playableDirector.Stop();
-            dialogText.SetActive(false);
+            _playableDirector.time = 0;
         }
         else
         {
