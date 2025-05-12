@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 651161270158535219}
   - component: {fileID: 3690503397952978498}
   - component: {fileID: 5732326942856998923}
-  - component: {fileID: 7936826534173003873}
+  - component: {fileID: 5442518645923119153}
   m_Layer: 8
   m_Name: Fragment
   m_TagString: InteractiveObject
@@ -108,7 +108,7 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 43016882441064336, guid: 6b3346dcbeec2b544ae70805c191957c, type: 2}
---- !u!114 &7936826534173003873
+--- !u!114 &5442518645923119153
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -117,7 +117,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5252846510336722206}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09c1de0e3deca72488394bbdf7bc22fc, type: 3}
+  m_Script: {fileID: 11500000, guid: 5057bec23b5123243825b869d484f84b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &6187991694420119524
