@@ -16,18 +16,18 @@ public class Fragment : ObjectInteractionController
             allCollected = true;
             Debug.Log("All fragments collected");
         }
-        else if (!allCollected && FragmentGenerator.numberToCollect > 0)
+        else if (!allCollected && NPCInteractionController.numberToCollect > 0)
         {
-            Debug.Log("Fragment remaining to collect : " + FragmentGenerator.numberToCollect);
+            Debug.Log("Fragment remaining to collect : " + NPCInteractionController.numberToCollect);
         }
     }
     private bool AllFragmentsAreCollected()
     {
-        return fragmentCollected >= FragmentGenerator.numberToCollect;
+        return fragmentCollected >= NPCInteractionController.numberToCollect;
     }
     public override void ObjectInteraction()
     {
-        FragmentGenerator.numberToCollect--;
+        NPCInteractionController.numberToCollect--;
         Debug.Log($"Fragment number {fragmentCollected} collected");
     }
 }
