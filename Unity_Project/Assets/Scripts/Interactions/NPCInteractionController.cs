@@ -14,19 +14,51 @@ public class NPCInteractionController : ObjectInteractionController
     private bool IsAlreadyClicked = false;
     // This method will be called when the player interacts with the NPC
     // It will play a sound and log a message to the console
-
+    [Header("Spawn Fragment Settings")]
+    [Space(32)]
     [SerializeField] private GameObject[] spawnLocation;
     [SerializeField] private GameObject fragmentToSpawn;
     [SerializeField] private int numberToSpawn;
-    private bool isSpawned = false;
 
-
+    [Header("Final phase of the game Settings")]
+    [Space(32)]
     [SerializeField] private GameObject finalkey;
     [SerializeField] private GameObject finaltransform;
 
     public static int numberToCollect = 5;
     private int[] randomIndex;
-    // Start is called before the first frame update
+    private bool isSpawned = false;
+
+
+    /// <summary>
+    /// Is called when clicked on
+    /// </summary>
+    public override void ObjectInteraction()
+    {
+        if (_playableDirector.state == PlayState.Playing)
+        {
+            _playableDirector.Stop();
+            _playableDirector.time = 0;
+        }
+        else
+        {
+            _playableDirector.Play();
+        }
+        // Prevents the apparition of the fragments multiple times 
+        if (!IsAlreadyClicked)
+        {
+            Debug.Log("Dialog Triggered");
+            IsAlreadyClicked = true;
+            SpawnFragments();
+        }
+        Debug.Log("NPC Interaction Triggered");
+    }
+
+
+
+
+
+
     public void SpawnFragments()
     {
 
@@ -62,31 +94,6 @@ public class NPCInteractionController : ObjectInteractionController
         }
     }
 
-    public override void ObjectInteraction()
-    {
-        if (!IsAlreadyClicked)
-        {
-            Debug.Log("Dialog Triggered");
-            IsAlreadyClicked = true;
-            SpawnFragments();
-            _playableDirector.Play();
-            _AudioSource.PlayOneShot(_clip1);
-        }
-        
-        if (_playableDirector.state == PlayState.Playing)
-        {
-            _AudioSource.Stop();
-            _playableDirector.Stop();
-            _playableDirector.time = 0;
-        }
-        else
-        {
-            _playableDirector.Play();
-            _AudioSource.PlayOneShot(_clip1);
-        }
-        
-        Debug.Log("NPC Interaction Triggered");
-    }
 
     public void finalGeneration()
     {
