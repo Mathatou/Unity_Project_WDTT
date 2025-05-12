@@ -6,8 +6,14 @@ public class FragmentGenerator : MonoBehaviour
 {
     [SerializeField] private GameObject[] spawnLocation;
     [SerializeField] private GameObject fragmentToSpawn;
+    [Header("Final key and transform")]
+    [Space(32)]
+    [SerializeField] private GameObject finalkey;
+    [SerializeField] private GameObject finaltransform;
     [SerializeField] private int numberToSpawn;
-    private int[] randomIndex ;
+
+    private int[] randomIndex;
+    public static int numberToCollect = 5;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,5 +36,8 @@ public class FragmentGenerator : MonoBehaviour
             Instantiate(fragmentToSpawn,spawnLocation[randomIndex[i]].transform);
         }
     }
-
+    public void finalGeneration()
+    {
+        Instantiate(finalkey, finaltransform.transform);
+    }
 }
