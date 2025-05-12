@@ -11,7 +11,6 @@ public class NPCInteractionController : ObjectInteractionController
     [SerializeField] private AudioSource _AudioSource;
     [SerializeField] private PlayableDirector _playableDirector;
     [SerializeField] private GameObject dialogText;
-    [SerializeField] private GameObject spawnlocation;
     private bool IsAlreadyClicked = false;
     // This method will be called when the player interacts with the NPC
     // It will play a sound and log a message to the console
@@ -91,6 +90,7 @@ public class NPCInteractionController : ObjectInteractionController
 
     public void finalGeneration()
     {
+        Debug.Log("Final key generated at : " + finaltransform.transform.position);
         Instantiate(finalkey, finaltransform.transform);
     }
 }

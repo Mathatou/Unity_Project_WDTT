@@ -14,6 +14,7 @@ public class Fragment : ObjectInteractionController
         if (AllFragmentsAreCollected() && !allCollected)
         {
             allCollected = true;
+            _Generator.finalGeneration();
             Debug.Log("All fragments collected");
         }
         else if (!allCollected && NPCInteractionController.numberToCollect > 0)
