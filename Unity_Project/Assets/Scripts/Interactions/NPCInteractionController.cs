@@ -6,9 +6,6 @@ using UnityEngine.Playables;
 
 public class NPCInteractionController : ObjectInteractionController
 {
-
-    [SerializeField] private AudioClip _clip1 ;
-    [SerializeField] private AudioSource _AudioSource;
     [SerializeField] private PlayableDirector _playableDirector;
     [SerializeField] private GameObject dialogText;
     private bool IsAlreadyClicked = false;
