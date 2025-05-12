@@ -19,6 +19,11 @@ public class NPCInteractionController : ObjectInteractionController
     [SerializeField] private GameObject[] spawnLocation;
     [SerializeField] private GameObject fragmentToSpawn;
     [SerializeField] private int numberToSpawn;
+
+    [SerializeField] private GameObject finalkey;
+    [SerializeField] private GameObject finaltransform;
+
+    public static int numberToCollect = 5;
     private int[] randomIndex;
     // Start is called before the first frame update
     public void SpawnFragments()
@@ -66,5 +71,10 @@ public class NPCInteractionController : ObjectInteractionController
         }
         
         Debug.Log("NPC Interaction Triggered");
+    }
+
+    public void finalGeneration()
+    {
+        Instantiate(finalkey, finaltransform.transform);
     }
 }
