@@ -6,7 +6,7 @@ public class FragInteraction : ObjectInteractionController
 {
     public override void ObjectInteraction()
     {
-        Debug.Log("Fragment Interaction");
-
+        FragmentGenerator.numberToCollect--;
+        Debug.Log($"Number to collect : {FragmentGenerator.numberToCollect}");
     }
 }

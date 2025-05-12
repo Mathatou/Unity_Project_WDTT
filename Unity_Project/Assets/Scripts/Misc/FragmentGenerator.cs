@@ -36,6 +36,14 @@ public class FragmentGenerator : MonoBehaviour
             Instantiate(fragmentToSpawn,spawnLocation[randomIndex[i]].transform);
         }
     }
+    private void Update()
+    {
+        if (numberToCollect <= 0)
+        {
+            Debug.Log("All fragments collected");
+            finalGeneration();
+        }
+    }
     public void finalGeneration()
     {
         Instantiate(finalkey, finaltransform.transform);
