@@ -12,6 +12,7 @@ public class FragmentGenerator : MonoBehaviour
     [SerializeField] private GameObject finaltransform;
     [SerializeField] private int numberToSpawn;
 
+    private bool isSpawned = false;
     private int[] randomIndex;
     public static int numberToCollect = 5;
     // Start is called before the first frame update
@@ -38,10 +39,14 @@ public class FragmentGenerator : MonoBehaviour
     }
     private void Update()
     {
-        if (numberToCollect <= 0)
+        if(!isSpawned)
         {
-            Debug.Log("All fragments collected");
-            finalGeneration();
+            if (numberToCollect <= 0)
+            {
+                Debug.Log("All fragments collected");
+                finalGeneration();
+                isSpawned = true;
+            }
         }
     }
     public void finalGeneration()
