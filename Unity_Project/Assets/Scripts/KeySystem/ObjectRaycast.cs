@@ -4,6 +4,10 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// This class handles raycasting to detect and interact with objects.
+/// This script is attached to the camera object of the player.
+/// </summary>
 public class ObjectRaycast : MonoBehaviour
 {
     // Distance the raycast will check for objects
