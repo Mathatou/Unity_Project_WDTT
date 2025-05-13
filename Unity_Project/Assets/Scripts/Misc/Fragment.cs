@@ -5,8 +5,8 @@ using UnityEngine;
 public class Fragment : ObjectInteractionController
 {
     private int fragmentCollected;
-    [SerializeField] private NPCInteractionController _Generator;
     private bool allCollected = false;
+    [SerializeField] private NPCInteractionController _Generator;
     
 
     // Update is called once per frame
@@ -30,6 +30,7 @@ public class Fragment : ObjectInteractionController
     public override void ObjectInteraction()
     {
         NPCInteractionController.numberToCollect--;
+        gameObject.SetActive(false);
         Debug.Log($"Fragment number {fragmentCollected} collected");
     }
 }
