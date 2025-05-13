@@ -50,12 +50,6 @@ public class NPCInteractionController : ObjectInteractionController
         }
         Debug.Log("NPC Interaction Triggered");
     }
-
-
-
-
-
-
     public void SpawnFragments()
     {
 
