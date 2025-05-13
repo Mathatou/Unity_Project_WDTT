@@ -7,6 +7,7 @@ public class Fragment : ObjectInteractionController
     private int fragmentCollected;
     [SerializeField] private NPCInteractionController _Generator;
     private bool allCollected = false;
+    
 
     // Update is called once per frame
     void Update()
