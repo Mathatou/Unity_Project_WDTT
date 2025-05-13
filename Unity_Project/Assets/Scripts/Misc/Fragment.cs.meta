@@ -3,7 +3,9 @@ guid: 5057bec23b5123243825b869d484f84b
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - _Generator: {instanceID: 0}
+  - showFragmentCollectedUI: {fileID: 2261485494403588591, guid: 8984988a0cabafc459aefe832f4716ce, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
