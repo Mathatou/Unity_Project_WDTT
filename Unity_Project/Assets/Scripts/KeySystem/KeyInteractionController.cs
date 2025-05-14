@@ -4,7 +4,7 @@ using KeySystem;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class KeyItemController : ObjectInteractionController
+public class KeyInteractionController : ObjectInteractionController
 {
     [SerializeField] private bool LockedDoor = false;
     [SerializeField] private bool Key = false;
