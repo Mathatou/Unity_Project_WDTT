@@ -1,8 +1,7 @@
 # 🌌 Where Darkness Took Them
 
 ## Démo du jeu :
-
-[![Vidéo de présentation !]([https://youtu.be/vt5fpE0bzSY](https://www.youtube.com/watch?v=2dAnTD_pAfQ))
+[![Alt text](https://img.youtube.com/vi/VID/0.jpg)](https://www.youtube.com/watch?v=2dAnTD_pAfQ)
 
 https://www.youtube.com/watch?v=2dAnTD_pAfQ
 
