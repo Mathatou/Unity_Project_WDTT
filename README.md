@@ -2,6 +2,8 @@
 
 ## Démo du jeu :
 
+[![Vidéo de présentation !]([https://youtu.be/vt5fpE0bzSY](https://www.youtube.com/watch?v=2dAnTD_pAfQ))
+
 https://www.youtube.com/watch?v=2dAnTD_pAfQ
 
 ## 📌 Description
