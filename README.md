@@ -40,8 +40,6 @@ Projet de jeu réalisé dans le cadre de la E3 à ESIEE Paris. Il s'agit d'un je
 
 ![Sampler Pack](Resources/Images/smapler.webp)  
 
-**_A voir ce qu'on utilise ou pas, pas oublier de rajouter des images pour illustrer les assets_**  
-
 ## 🎮 Comment jouer ?  
 1. Lancer l'exécutable fourni  
 2. Suivre le petit tutoriel expliquant les commandes  
@@ -53,5 +51,5 @@ Projet de jeu réalisé dans le cadre de la E3 à ESIEE Paris. Il s'agit d'un je
 ## 📜 Licence & Crédits  
 - Ce projet est réalisé dans un cadre éducatif et n'est pas destiné à une diffusion commerciale.  
 - Les assets utilisés appartiennent à leurs créateurs respectifs et sont utilisés sous licence appropriée.  
-- Nous remercions Badr TAJINI pour l'accompagnement sur ce projet.  
+- Nous remercions Badr TAJINI pour nous avoir donné l'occassion d'effectuer ce projet.  
 - Nous remercions également APPUDURAI Achveiya, étudiante à ESIEE Paris en E3E pour nous avoir prêté sa voix pour les dialogues du PNJ.  
