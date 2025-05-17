@@ -1,39 +1,57 @@
 # Where Darkness Took Them (titre WIP)
-## 📌 Description
-Projet de jeu réalisé dans le cadre de la E3 à ESIEE Paris. Il s'agit d'un jeu d'exploration et d'horreur où le joueur doit retrouver des objets appartenant à un membre de sa famille dans un manoir afin de le sauver des griffes d'une mystérieuse entité/personne.
 
-## 🛠 Technologies utilisées 
-- **Moteur de jeu :** Unity
-- **Langage de programmation :** C#
+## 📌 Description
+Projet de jeu réalisé dans le cadre de la E3 à ESIEE Paris. Il s'agit d'un jeu d'exploration et d'horreur où le joueur doit retrouver des fragments de sa mémoire dans un manoir afin de pouvoir s'enfuir.
+
+## 🛠 Technologies utilisées
+- **Moteur de jeu :** Unity  
+- **Langage de programmation :** C#  
 
 ## 🎨 Assets
-- [Polygon Horror Mansion (Synty)](https://assetstore.unity.com/packages/3d/environments/fantasy/polygon-horror-mansion-low-poly-3d-art-by-synty-213346)
+- [Polygon Horror Mansion (Synty)](https://assetstore.unity.com/packages/3d/environments/fantasy/polygon-horror-mansion-low-poly-3d-art-by-synty-213346)  
 
-![Horror Mansion](Resources/Images/HorrorMansion.png)
-- [Starter Assets - FirstPerson | Updates in new CharacterController package](https://assetstore.unity.com/packages/essentials/starter-assets-firstperson-updates-in-new-charactercontroller-pa-196525)
+![Horror Mansion](Resources/Images/HorrorMansion.png)  
 
-![1st person controls](Resources/Images/1stPerson.png)
+- [Starter Assets - FirstPerson | Updates in new CharacterController package](https://assetstore.unity.com/packages/essentials/starter-assets-firstperson-updates-in-new-charactercontroller-pa-196525)  
 
-- [Starter Assets - ThirdPerson | Updates in new CharacterController package](https://assetstore.unity.com/packages/essentials/starter-assets-thirdperson-updates-in-new-charactercontroller-pa-196526)
+![1st person controls](Resources/Images/1stPerson.png)  
 
-![3rd Person controls](Resources/Images/3rdPerson.png)
+- [Starter Assets - ThirdPerson | Updates in new CharacterController package](https://assetstore.unity.com/packages/essentials/starter-assets-thirdperson-updates-in-new-charactercontroller-pa-196526)  
 
-- [Cute Monster Ghost's FREE](https://assetstore.unity.com/packages/3d/characters/creatures/cute-monster-ghost-s-free-308550)
+![3rd Person controls](Resources/Images/3rdPerson.png)  
 
-![Ghosties](Resources/Images/Ghosts.png)
+- [Cute Monster Ghost's FREE](https://assetstore.unity.com/packages/3d/characters/creatures/cute-monster-ghost-s-free-308550)  
 
+![Ghosties](Resources/Images/Ghosts.png)  
 
-**_A voir ce qu'on utilise ou pas, pas oublier de rajouter des images pour illustrer les assets_**
+- [Footstep mini-pack](https://assetstore.unity.com/packages/audio/sound-fx/foley/footsteps-mini-sound-pack-307682)  
 
-## 🎮 Comment jouer ?
-1. Lancer l'exécutable fourni
-2. Suivre le petit tutoriel expliquant les commandes
+![Footsteps](Resources/Images/footstep.webp)  
 
-## 👥 Équipe
-- AUBRY Mathias - Dév
-- MELIANI Samy - Dév / Music Artist
+- [Wooden Planks](https://assetstore.unity.com/packages/3d/props/industrial/wooden-planks-various-308365)  
 
-## 📜 Licence & Crédits
-- Ce projet est réalisé dans un cadre éducatif et n'est pas destiné à une diffusion commerciale.
-- Les assets utilisés appartiennent à leurs créateurs respectifs et sont utilisés sous licence appropriée.
-- Nous remercions Badr TAJINI pour l'accompagnement sur ce projet
+![Planks](Resources/Images/planks.webp)  
+
+- [PROMETEO : Car Controller](https://assetstore.unity.com/packages/tools/physics/prometeo-car-controller-209444)  
+
+![Prometeo](Resources/Images/pormeteo.webp)  
+
+- [POLYGON - Sampler Pack](https://assetstore.unity.com/packages/3d/environments/polygon-sampler-pack-207048)  
+
+![Sampler Pack](Resources/Images/smapler.webp)  
+
+**_A voir ce qu'on utilise ou pas, pas oublier de rajouter des images pour illustrer les assets_**  
+
+## 🎮 Comment jouer ?  
+1. Lancer l'exécutable fourni  
+2. Suivre le petit tutoriel expliquant les commandes  
+
+## 👥 Équipe  
+- AUBRY Mathias - Développeur / Game dev  
+- MELIANI Samy - Développeur / Game dev / Music Artist  
+
+## 📜 Licence & Crédits  
+- Ce projet est réalisé dans un cadre éducatif et n'est pas destiné à une diffusion commerciale.  
+- Les assets utilisés appartiennent à leurs créateurs respectifs et sont utilisés sous licence appropriée.  
+- Nous remercions Badr TAJINI pour l'accompagnement sur ce projet.  
+- Nous remercions également APPUDURAI Achveiya, étudiante à ESIEE Paris en E3E pour nous avoir prêté sa voix pour les dialogues du PNJ.  
