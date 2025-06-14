@@ -19,7 +19,7 @@ public class PauseMenuController : MenuController
         audioSource.loop = true;
         audioSource.playOnAwake = false;
         audioSource.spatialBlend = 0f; // 0 = 2D, 1 = 3D
-        audioSource.volume = 0.4f;
+        audioSource.volume = 0.25f;
 
         audioSource.Play();
     }
