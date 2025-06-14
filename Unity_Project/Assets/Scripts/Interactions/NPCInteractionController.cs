@@ -36,7 +36,6 @@ public class NPCInteractionController : ObjectInteractionController
     {
         if (_playableDirector.state == PlayState.Playing)
         {
-            _playableDirector.Stop();
             _playableDirector.time = 0;
         }
         else
@@ -64,7 +63,6 @@ public class NPCInteractionController : ObjectInteractionController
 
     public void SpawnFragments()
     {
-
         randomIndex = new int[numberToSpawn];
         for (int i = 0; i < numberToSpawn; i++)
         {
