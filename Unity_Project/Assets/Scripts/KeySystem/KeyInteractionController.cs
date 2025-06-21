@@ -14,14 +14,15 @@ public class KeyInteractionController : ObjectInteractionController
     [SerializeField] private int waitTimer = 1;
 
     private KeyDoorController doorObject;
+    private AudioSource audioSource;
 
     private void Start()
     {
-        if(LockedDoor)
+        audioSource = GetComponent<AudioSource>();
+        if (LockedDoor)
         {
             doorObject = GetComponent<KeyDoorController>();
         }
-
     }
     /// <summary>
     /// Cette fonction va afficher un texte lorsque le joueur ramasse un objet.
@@ -49,6 +50,7 @@ public class KeyInteractionController : ObjectInteractionController
         }
         else if (Key)
         {
+            audioSource.PlayOneShot(audioSource.clip); // Play key pickup sound
             StartCoroutine(ShowItemPickedAndDeactivates());
         }
     }

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Windows;
 
 namespace KeySystem
 {
@@ -12,17 +13,15 @@ namespace KeySystem
         private Rigidbody doorRb;
         private AudioSource audioSource;
 
-
         /*[Header( "Animation Names" )]
         [SerializeField] private string openAnimationName = "DoorOpen";
         [SerializeField] private string closeAnimationName = "DoorClose";*/
 
         [SerializeField] private GameObject showDoorLockedUI = null;
-
-
         [SerializeField] private KeyInventory _inventory = null;
-
         [SerializeField] private int waitTimer = 1;
+        [SerializeField] private AudioClip doorLockedSound;
+
         private bool doOnce = false;
 
         private void Awake()
@@ -61,6 +60,8 @@ namespace KeySystem
             }
             else
             {
+                Debug.Log("gya");
+                audioSource.PlayOneShot(doorLockedSound); // Play door locked sound
                 StartCoroutine( ShowDoorLocked() );
             }
         }
