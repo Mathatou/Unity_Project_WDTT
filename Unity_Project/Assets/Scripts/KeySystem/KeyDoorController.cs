@@ -10,6 +10,8 @@ namespace KeySystem
         private Animator doorAnim;
         private HingeJoint Joint;
         private Rigidbody doorRb;
+        private AudioSource audioSource;
+
 
         /*[Header( "Animation Names" )]
         [SerializeField] private string openAnimationName = "DoorOpen";
@@ -21,12 +23,14 @@ namespace KeySystem
         [SerializeField] private KeyInventory _inventory = null;
 
         [SerializeField] private int waitTimer = 1;
+        private bool doOnce = false;
 
         private void Awake()
         {
             doorAnim = GetComponent<Animator>();
             Joint = GetComponent<HingeJoint>();
             doorRb = GetComponent<Rigidbody>();
+            audioSource = GetComponent<AudioSource>();
             doorRb.isKinematic = true; // Make the door kinematic to prevent physics interactions
             Joint.useLimits = true;
             Joint.limits = new JointLimits { min = 0, max = 0 }; // Door can't move initially
@@ -43,10 +47,17 @@ namespace KeySystem
         {
             if( _inventory.hasKey )
             {
-                Joint.useLimits = false;
-                Joint.limits = new JointLimits { min = -90, max = 0 }; // Door can move to open position
-                Joint.enableCollision = false;
-                doorRb.isKinematic = false; // To allow physics interactions
+                if(!doOnce)
+                {
+                    Debug.Log("Opening Door");
+                    Joint.useLimits = false;
+                    Joint.limits = new JointLimits { min = -90, max = 0 }; // Door can move to open position
+                    Joint.enableCollision = false;
+                    doorRb.isKinematic = false; // To allow physics interactions
+                    Debug.Log("Playing sound door open");
+                    audioSource.PlayOneShot(audioSource.clip); // Play door opening sound
+                }
+                doOnce = true; // Prevent further opening until closed  
             }
             else
             {
