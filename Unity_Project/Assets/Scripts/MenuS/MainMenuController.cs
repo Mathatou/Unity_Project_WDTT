@@ -5,6 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuController : MenuController
 {
+    private void Start()
+    {
+        Cursor.visible = true; // Ensure the cursor is visible when the main menu is active
+        Cursor.lockState = CursorLockMode.None; // Unlock the cursor so it can be moved freely
+    }
     /// <summary>
     /// Go from current scene to Histoire scene
     /// </summary>
