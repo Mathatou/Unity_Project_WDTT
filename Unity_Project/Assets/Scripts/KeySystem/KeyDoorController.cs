@@ -48,19 +48,16 @@ namespace KeySystem
             {
                 if(!doOnce)
                 {
-                    Debug.Log("Opening Door");
                     Joint.useLimits = false;
                     Joint.limits = new JointLimits { min = -90, max = 0 }; // Door can move to open position
                     Joint.enableCollision = false;
                     doorRb.isKinematic = false; // To allow physics interactions
-                    Debug.Log("Playing sound door open");
                     audioSource.PlayOneShot(audioSource.clip); // Play door opening sound
                 }
                 doOnce = true; // Prevent further opening until closed  
             }
             else
             {
-                Debug.Log("gya");
                 audioSource.PlayOneShot(doorLockedSound); // Play door locked sound
                 StartCoroutine( ShowDoorLocked() );
             }
