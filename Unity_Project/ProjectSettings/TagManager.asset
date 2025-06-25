@@ -7,6 +7,7 @@ TagManager:
   - pickup
   - InteractiveObject
   - NPC
+  - Fragment
   layers:
   - Default
   - TransparentFX

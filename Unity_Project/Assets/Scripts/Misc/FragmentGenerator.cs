@@ -39,7 +39,7 @@ public class FragmentGenerator : MonoBehaviour
     }
     private void Update()
     {
-        if(!isSpawned)
+        if (!isSpawned)
         {
             if (numberToCollect <= 0)
             {
@@ -47,6 +47,7 @@ public class FragmentGenerator : MonoBehaviour
                 finalGeneration();
                 isSpawned = true;
             }
+            
         }
     }
     public void finalGeneration()

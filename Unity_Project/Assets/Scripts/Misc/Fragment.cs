@@ -6,6 +6,7 @@ public class Fragment : ObjectInteractionController
 {
     private int fragmentCollected;
     private bool allCollected = false;
+    private bool doOnce = false;
     [SerializeField] private NPCInteractionController _Generator;
     [SerializeField] private GameObject showFragmentCollectedUI;
     [SerializeField] private int waitTimer;
@@ -47,8 +48,37 @@ public class Fragment : ObjectInteractionController
     }
     public override void ObjectInteraction()
     {
+        if (doOnce)
+        {
+            Debug.Log("Fragment already collected");
+            return;
+        }
+        doOnce = true;
         NPCInteractionController.numberToCollect--;
+        if (NPCInteractionController.numberToCollect == 0)
+        {
+            Debug.Log("Destroying remaining masks");
+            DestroyRemainingFragments();
+        }
+        else
+        {
+            Debug.Log("there is still to collect");
+        }
         StartCoroutine(showFragmentUI());
         Debug.Log($"Fragment number {fragmentCollected} collected");
     }
+    private void DestroyRemainingFragments()
+    {
+        GameObject[] interactiveObjects = GameObject.FindGameObjectsWithTag("InteractiveObject");
+
+        foreach (GameObject obj in interactiveObjects)
+        {
+            Fragment fragment = obj.GetComponent<Fragment>();
+            if (fragment != null && obj != this.gameObject)
+            {
+                Destroy(obj);
+            }
+        }
+    }
+
 }
