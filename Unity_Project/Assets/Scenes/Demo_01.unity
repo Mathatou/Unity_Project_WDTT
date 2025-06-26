@@ -291451,8 +291451,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ab5a099b57123d4cafdbcb7ae702e98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  showDoorLockedUI: {fileID: 598650011}
-  _inventory: {fileID: 908734235}
+  showDoorLockedUI: {fileID: 1253252356}
+  _inventory: {fileID: 1257063129411007913}
   waitTimer: 1
   doorLockedSound: {fileID: 8300000, guid: 089fd14c744e4294197e07bc4a77f071, type: 3}
 --- !u!4 &6754940558167817667
@@ -291588,7 +291588,7 @@ MonoBehaviour:
   LockedDoor: 1
   Key: 0
   _keyInventory: {fileID: 1257063129411007913}
-  showItemPickedUI: {fileID: 928830679}
+  showItemPickedUI: {fileID: 0}
   waitTimer: 1
 --- !u!82 &8216117633631736127
 AudioSource:
