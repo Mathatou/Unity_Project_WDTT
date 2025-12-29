@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-
+using TMPro;
 public class FlashLightController : ObjectInteractionController
 {
 
     [SerializeField] private Transform eyesPosition;
+    [SerializeField] private TextMeshProUGUI tutoFlashLigth;
     private Rigidbody rb;
     private MeshCollider mc;
     private Light lg;
@@ -41,7 +42,14 @@ public class FlashLightController : ObjectInteractionController
         rb.isKinematic=true;
         rb.interpolation = RigidbodyInterpolation.None;
     }
-
+    private void activateTuto()
+    {
+        tutoFlashLigth.gameObject.SetActive(true);
+    }
+    private void deactivateTuto()
+    {
+        tutoFlashLigth.gameObject.SetActive(false);
+    }
     private void grabFlashlight()
     {
         // Deactivate physics components
@@ -54,10 +62,12 @@ public class FlashLightController : ObjectInteractionController
         isHeld = true;
         // Deactivate particle system
         ps.gameObject.SetActive(false);
+        activateTuto();
     }
 
     private void activateFlash()
     {
+        deactivateTuto();
         lg.enabled = !lg.enabled;
     }
 }
