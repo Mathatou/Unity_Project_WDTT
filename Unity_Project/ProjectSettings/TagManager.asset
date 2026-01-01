@@ -9,6 +9,7 @@ TagManager:
   - NPC
   - Fragment
   - BloodPuddle
+  - Gosty
   layers:
   - Default
   - TransparentFX
