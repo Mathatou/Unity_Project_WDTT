@@ -6,22 +6,22 @@ public class GhostInteraction : ObjectInteractionController
 {
     public bool isJumpscare = false;
     [SerializeField] private AudioClip harmlessSound;
-    [SerializeField] private AudioClip jumpScareSound;
-    private void Start()
-    {
-        harmlessSound.LoadAudioData();
-        jumpScareSound.LoadAudioData();
-    }
+    [SerializeField] private AudioClip[] jumpScareSounds;
+    [SerializeField] private GameObject jumpScare;
     public override void ObjectInteraction()
     {
-        AudioClip clipToPlay = isJumpscare ? jumpScareSound : harmlessSound;
+        AudioClip clipToPlay;
         if (isJumpscare)
         {
+            int randIndex = Random.Range(0, jumpScareSounds.Length);
+            clipToPlay = jumpScareSounds[randIndex];
+            GameObject JS = Instantiate(jumpScare, transform.position, Quaternion.identity);
+            Destroy(JS, 3f);
             Debug.Log("Jumpscare !");
-            // Ajouter ici le code pour le jumpscare (animation, son, etc.)
         }
         else
         {
+            clipToPlay = harmlessSound;
             Debug.Log("Ghost is harmless.");
         }
         if(clipToPlay != null)

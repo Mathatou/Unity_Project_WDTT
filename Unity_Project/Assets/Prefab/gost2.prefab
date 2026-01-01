@@ -159,7 +159,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isJumpscare: 0
   harmlessSound: {fileID: 8300000, guid: e10c4ccbc43587842a0b10249729cbd8, type: 3}
-  jumpScareSound: {fileID: 0}
+  jumpScareSounds:
+  - {fileID: 8300000, guid: 07fff004a636e464d82c87eccbea03f4, type: 3}
+  - {fileID: 8300000, guid: 7f0abb686952d0146b78f723cc557b32, type: 3}
+  jumpScare: {fileID: 2946272693264850637, guid: e9b5095c18555354fb64ae66cbe084ba, type: 3}
 --- !u!65 &8777533882237632304
 BoxCollider:
   m_ObjectHideFlags: 0
