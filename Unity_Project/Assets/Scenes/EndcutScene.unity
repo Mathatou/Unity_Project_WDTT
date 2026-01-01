@@ -90393,6 +90393,7 @@ MonoBehaviour:
   showDoorLockedUI: {fileID: 1490393843}
   _inventory: {fileID: 1614411409}
   waitTimer: 1
+  doorLockedSound: {fileID: 0}
 --- !u!65 &693287720
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -108787,6 +108788,55 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4653005782318846, guid: facae2bbe8724d24d9cc51ee1afb3c5e, type: 3}
   m_PrefabInstance: {fileID: 830966169}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &831904639
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 831904640}
+  - component: {fileID: 831904641}
+  m_Layer: 0
+  m_Name: Global volume
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &831904640
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 831904639}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -12.925665, y: 4.628791, z: -3.898138}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2016545997}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &831904641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 831904639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IsGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: 6e29d3f4f771ba0459c02e0d5a750f70, type: 2}
 --- !u!1001 &831971740
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -162741,6 +162791,7 @@ MonoBehaviour:
   showDoorLockedUI: {fileID: 1859203001}
   _inventory: {fileID: 2038271919}
   waitTimer: 1
+  doorLockedSound: {fileID: 0}
 --- !u!65 &1238051648
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -198783,6 +198834,7 @@ MonoBehaviour:
   showDoorLockedUI: {fileID: 1859203001}
   _inventory: {fileID: 1540460411}
   waitTimer: 1
+  doorLockedSound: {fileID: 0}
 --- !u!114 &1503354419
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -206326,6 +206378,7 @@ MonoBehaviour:
   showDoorLockedUI: {fileID: 1859203001}
   _inventory: {fileID: 1540460411}
   waitTimer: 1
+  doorLockedSound: {fileID: 0}
 --- !u!114 &1559787249
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -222451,6 +222504,7 @@ MonoBehaviour:
   showDoorLockedUI: {fileID: 80294933}
   _inventory: {fileID: 1614411409}
   waitTimer: 1
+  doorLockedSound: {fileID: 0}
 --- !u!65 &1674595850
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -237034,6 +237088,7 @@ MonoBehaviour:
   showDoorLockedUI: {fileID: 257222864}
   _inventory: {fileID: 1142833327}
   waitTimer: 1
+  doorLockedSound: {fileID: 0}
 --- !u!65 &1771909749
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -268547,7 +268602,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   changeTime: 12
-  sceneName: Menu
+  sceneName: Demo_02
   cutscene: {fileID: 2001307201}
   isLastCutscene: 0
 --- !u!1001 &2001961609
@@ -269859,6 +269914,38 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4993827880400208, guid: d020c55fc22552a49a077450c4cf1701, type: 3}
   m_PrefabInstance: {fileID: 2015894455}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2016545996
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2016545997}
+  m_Layer: 0
+  m_Name: Postprocessing
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2016545997
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2016545996}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 6.515713, y: 2.1980283, z: -14.999464}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 831904640}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2016676113
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -287711,12 +287798,7 @@ Animator:
   m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
-  m_WarningMessage: "\nBinding warning: Some generic clip(s) animate transforms that
-    are already bound by a Humanoid avatar. These transforms can only be changed
-    by Humanoid clips.\n\tTransform 'IndexFinger_02'\n\tTransform 'Finger_02 1'\n\tTransform
-    'Elbow_R'\n\tTransform 'Finger_02'\n\tTransform 'Finger_03'\n\tTransform 'Ball_L'\n\tTransform
-    'Finger_03 1'\n\tTransform 'Thumb_02'\n\tTransform 'Ball_R'\n\tTransform 'Clavicle_L'\n\tand
-    more ..."
+  m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
@@ -288595,3 +288677,4 @@ SceneRoots:
   - {fileID: 839165262}
   - {fileID: 602216193}
   - {fileID: 1209155058}
+  - {fileID: 2016545997}

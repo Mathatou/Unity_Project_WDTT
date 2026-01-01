@@ -284486,6 +284486,8 @@ MonoBehaviour:
   - {fileID: 1037874928}
   - {fileID: 14470256}
   theKey: {fileID: 5845132295269690157}
+  newAmbianceMusic: {fileID: 8300000, guid: e83f64e125e65134aa708a62b5bd587d, type: 3}
+  GOambianceSource: {fileID: 589782343}
 --- !u!65 &2089647278
 BoxCollider:
   m_ObjectHideFlags: 0
