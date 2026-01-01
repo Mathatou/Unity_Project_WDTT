@@ -7,14 +7,25 @@ public class Gostmanager : MonoBehaviour
     [SerializeField] private GameObject gostPrefab;
     [SerializeField] private Transform[] spawnPoints;
     [SerializeField] private GameObject theKey;
-    // Start is called before the first frame update
+    [SerializeField] private AudioClip newAmbianceMusic;
+    [SerializeField] private GameObject GOambianceSource;
+    private AudioSource AS;
+
+    private void Start()
+    {
+        AS = GOambianceSource.GetComponent<AudioSource>();
+        newAmbianceMusic.LoadAudioData();
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            SpawnGhostsAndHideKey();
             // Désactivation du trigger pour ne pas relancer le spawn
             this.GetComponent<Collider>().enabled = false;
+            SpawnGhostsAndHideKey();
+            AS.clip = newAmbianceMusic;
+            AS.Play();
         }
     }
 

@@ -85,15 +85,11 @@ public class BloodyFeetManager : MonoBehaviour
     }
 
     // --- Détection de la flaque ---
-    // Cette fonction est appelée automatiquement quand le Character Controller entre dans un Trigger
     private void OnTriggerEnter(Collider other)
     {
-        // Vérifie si l'objet touché est bien une flaque de sang
-        // (Assurez-vous d'avoir mis le Tag "BloodPuddle" sur votre flaque, ou vérifiez le nom)
         if (other.CompareTag("BloodPuddle"))
         {
             RefillBlood();
-            Debug.Log("Pieds ensanglantés !");
         }
     }
 }

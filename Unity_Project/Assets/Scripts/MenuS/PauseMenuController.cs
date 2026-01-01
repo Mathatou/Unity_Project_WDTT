@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class PauseMenuController : MenuController
 {
+    public static PauseMenuController instance;
     public static bool GameIsPaused = false;
+    private bool isJumpscareActive = false;
     [SerializeField] private GameObject pauseMenuUI;
     [SerializeField] private GameObject manualUI;
     [SerializeField] private GameObject RTFM_UI;
@@ -12,6 +14,18 @@ public class PauseMenuController : MenuController
     private AudioSource audioSource;
     private bool doWeReadManual = false;
 
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
     public void Start()
     {
         audioSource = gameObject.AddComponent<AudioSource>();
@@ -25,7 +39,7 @@ public class PauseMenuController : MenuController
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape)&& !isJumpscareActive)
         {
             if (!doWeReadManual)
             {
@@ -55,7 +69,8 @@ public class PauseMenuController : MenuController
         {
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
-            audioSource.Play();
+            if(!isJumpscareActive)
+                audioSource.Play();
         }
     }
 
@@ -80,4 +95,33 @@ public class PauseMenuController : MenuController
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
     }
+
+    public void StartJumpscareSequence(float duration)
+    {
+        // 1. On bloque le menu pause
+        isJumpscareActive = true;
+
+        // 2. On coupe la musique d'ambiance
+        if (audioSource.isPlaying)
+        {
+            audioSource.Pause();
+        }
+
+        // 3. On programme le retour à la normale (Invoke permet d'attendre X secondes)
+        Invoke("EndJumpscareSequence", duration);
+    }
+
+    private void EndJumpscareSequence()
+    {
+        // 1. On débloque le menu
+        isJumpscareActive = false;
+
+        // 2. On remet la musique (si le jeu n'est pas en pause entre temps)
+        if (!GameIsPaused)
+        {
+            audioSource.Play();
+        }
+    }
+
+
 }
