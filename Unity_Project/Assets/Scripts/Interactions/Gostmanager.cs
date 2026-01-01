@@ -8,15 +8,20 @@ public class Gostmanager : MonoBehaviour
     [SerializeField] private Transform[] spawnPoints;
     [SerializeField] private GameObject theKey;
     // Start is called before the first frame update
-    void Start()
+    private void OnTriggerEnter(Collider other)
     {
-        SpawnGhostsAndHideKey();
+        if (other.CompareTag("Player"))
+        {
+            SpawnGhostsAndHideKey();
+            // Désactivation du trigger pour ne pas relancer le spawn
+            this.GetComponent<Collider>().enabled = false;
+        }
     }
 
     void SpawnGhostsAndHideKey()
     {
         // Choix du spot de la clé
-        //int keyIndex = 3;
+        theKey.SetActive(true);
         int keyIndex = Random.Range(0, spawnPoints.Length);
         // Placement de la clé dans la hierarchie 
         theKey.transform.SetParent(this.transform);
