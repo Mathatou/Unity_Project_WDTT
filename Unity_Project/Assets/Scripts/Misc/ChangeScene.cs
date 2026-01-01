@@ -2,7 +2,9 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.Playables;
 using UnityEngine.SceneManagement;
-
+/// <summary>
+/// Classe utilisée pour changer de scène après un certain temps (le temps qu'une cinématique se termine).
+/// </summary>
 public class ChangeScene : MonoBehaviour
 {
     [SerializeField] private float changeTime;
