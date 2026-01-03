@@ -8,8 +8,8 @@ public class GhostInteraction : ObjectInteractionController
     [SerializeField] private AudioClip harmlessSound;
     [SerializeField] private AudioClip jumpScareSound;
     [SerializeField] private GameObject jumpScare;
+    [SerializeField] private float screamerVolume = 0.7f;
     private float jumpsScareDuration = 3f;
-    private float screamerVolume = 0.7f;
     public override void ObjectInteraction()
     {
         AudioClip clipToPlay = isJumpscare ? jumpScareSound : harmlessSound ;
