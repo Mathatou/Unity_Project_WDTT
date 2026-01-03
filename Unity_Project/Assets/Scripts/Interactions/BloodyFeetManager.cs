@@ -22,13 +22,12 @@ public class BloodyFeetManager : MonoBehaviour
 
     void Start()
     {
-        // Initialise la dernière position connue
         lastStepPosition = transform.position;
     }
 
     void Update()
     {
-        // Si on n'a plus de sang sous les pieds, on ne fait rien
+        // Si on n'a plus de sang sous les pieds, on fait rien
         if (currentStepsRemaining <= 0) return;
 
         // Calcule la distance parcourue depuis la dernière trace
@@ -46,8 +45,6 @@ public class BloodyFeetManager : MonoBehaviour
     public void RefillBlood()
     {
         currentStepsRemaining = maxBloodySteps;
-        // Optionnel : réinitialiser pour commencer toujours du même pied
-        // isRightFootTurn = true; 
     }
 
     // --- Logique de création de la trace ---
