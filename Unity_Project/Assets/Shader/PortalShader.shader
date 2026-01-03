@@ -15,6 +15,8 @@ Shader "Unlit/StrangerPortalShader"
         [Header(Rendering)]
         _RimPower ("Glow Sharpness", Range(1.0, 8.0)) = 3.0
         _Transparency ("Edge Transparency", Range(0.0, 1.0)) = 0.1
+        _MaxDistance ("Raymarch Max Distance", Range(1, 50)) = 20
+
     }
     SubShader
     {
@@ -40,6 +42,7 @@ Shader "Unlit/StrangerPortalShader"
             float _AnimationSpeed;
             float _RimPower;
             float _Transparency;
+            float _MaxDistance;
 
             struct appdata { float4 vertex : POSITION; };
             struct v2f {
@@ -47,7 +50,6 @@ Shader "Unlit/StrangerPortalShader"
                 float3 wPos : TEXCOORD0; // World Position
             };
 
-            // --- 1. FONCTIONS UTILITAIRES (Bruit et Formes) ---
 
             // Fonction simple pour une sphère
             float sdfSphere(float3 p, float r) { return length(p) - r; }
@@ -69,16 +71,13 @@ Shader "Unlit/StrangerPortalShader"
                 // On part d'une sphère de base
                 float baseSphere = sdfSphere(p, _Radius);
                 
-                // On calcule le déplacement organique
+                // On calcule le déplacement
                 float displacement = fleshyNoise(p) * _DisplaceStrength;
                 
                 // On combine : la forme est la sphère PLUS le déplacement
                 return baseSphere + displacement;
             }
-
-            // --- 3. CALCUL DES NORMALES ---
-            // Essentiel pour l'éclairage : on regarde comment la distance change 
-            // un tout petit peu autour du point d'impact pour savoir où "regarde" la surface.
+           
             float3 calcNormal(float3 p)
             {
                 float2 e = float2(0.001, 0.0); // Epsilon (toute petite distance)
@@ -120,24 +119,20 @@ Shader "Unlit/StrangerPortalShader"
                 for(int step = 0; step < maxSteps; step++)
                 {
                     currentPosLocal = rayOriginLocal + rayDirLocal * t;
-                    // On vérifie la distance dans notre MAP
                     float d = map(currentPosLocal);
 
-                    // --- HIT ! On a touché la matière ---
+                    // --- HIT
                     if(d < 0.001) 
                     {
                         // 1. Calculer la normale de la surface touchée
                         float3 normal = calcNormal(currentPosLocal);
                         
                         // 2. Effet Fresnel (Rim Lighting)
-                        // C'est le secret du look "visqueux".
-                        // On regarde si le rayon de vue est perpendiculaire à la normale.
+                        // On regarde si le rayon est perpendiculaire à la normale.
                         // Si oui (sur les bords), ça brille plus fort.
-                        // Note: On utilise -rayDirLocal car le rayon vient DE la caméra.
                         float fresnel = pow(1.0 - saturate(dot(normal, -rayDirLocal)), _RimPower);
                         
                         // 3. Mélange des couleurs
-                        // Le cœur est sombre, les bords (fresnel) sont lumineux
                         float4 finalColor = lerp(_ColorCore, _ColorRim, fresnel);
 
                         // 4. Gestion de la transparence
@@ -153,7 +148,7 @@ Shader "Unlit/StrangerPortalShader"
                     t += d; // On avance
                     
                     // Distance de sécurité : si on sort de la boîte englobante (en gros)
-                    if(t > _Radius * 3.0) break; 
+                    if(t > _MaxDistance) break; 
                 }
 
                 // Pas de touche : pixel transparent
