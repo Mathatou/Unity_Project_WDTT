@@ -21,9 +21,13 @@ public class MainMenuController : MenuController
     /// <summary>
     /// Go from current scene to the play scene
     /// </summary>
-    public void goJouer()
+    public void goP1()
     {
         SceneManager.LoadScene("Demo_01");
+    }
+    public void goP2()
+    {
+        SceneManager.LoadScene("Demo_02");
     }
     
 }
