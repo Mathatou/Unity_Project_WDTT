@@ -27,7 +27,8 @@ public class NPCInteractionController : ObjectInteractionController
     [SerializeField] private GameObject finaltransform;
     [SerializeField] private float waitTimer = 5.0f;
     
-    [SerializeField] public static int numberToCollect = 5;
+    [SerializeField] public int numbernecessary= 5;
+    public static int numberToCollect = 5;
     private int[] randomIndex;
     private bool isSpawned = false;
 
@@ -55,6 +56,13 @@ public class NPCInteractionController : ObjectInteractionController
 
         Debug.Log($"C'est fait ! {spawnLocation.Length} points de spawn trouvés.");
     }
+
+    private void Awake()
+    {
+        numberToCollect = numbernecessary;
+        isSpawned = false;
+    }
+
 
     /// <summary>
     /// Is called when clicked on

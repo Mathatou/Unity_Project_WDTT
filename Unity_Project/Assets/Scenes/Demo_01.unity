@@ -260992,19 +260992,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 544499384937604079, guid: f40aa017a6a3840418c58058d522e23f, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.9421862
       objectReference: {fileID: 0}
     - target: {fileID: 544499384937604079, guid: f40aa017a6a3840418c58058d522e23f, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 544499384937604079, guid: f40aa017a6a3840418c58058d522e23f, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0.33508983
       objectReference: {fileID: 0}
     - target: {fileID: 544499384937604079, guid: f40aa017a6a3840418c58058d522e23f, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 544499384937604079, guid: f40aa017a6a3840418c58058d522e23f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -261012,7 +261012,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 544499384937604079, guid: f40aa017a6a3840418c58058d522e23f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 39.156
       objectReference: {fileID: 0}
     - target: {fileID: 544499384937604079, guid: f40aa017a6a3840418c58058d522e23f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -289409,6 +289409,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playableDirector: {fileID: 990908039}
   dialogText: {fileID: 359934180}
+  parentSpawnLocation: {fileID: 0}
   spawnLocation:
   - {fileID: 1199526336}
   - {fileID: 1714373912}
@@ -289432,6 +289433,7 @@ MonoBehaviour:
   finalkey: {fileID: 36046006}
   finaltransform: {fileID: 1682660636}
   waitTimer: 5
+  numbernecessary: 5
 --- !u!82 &1308132463689712701
 AudioSource:
   m_ObjectHideFlags: 0

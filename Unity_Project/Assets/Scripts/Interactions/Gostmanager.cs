@@ -8,12 +8,12 @@ public class Gostmanager : MonoBehaviour
     [SerializeField] private Transform[] spawnPoints;
     [SerializeField] private GameObject theKey;
     [SerializeField] private AudioClip newAmbianceMusic;
-    [SerializeField] private GameObject GOambianceSource;
     private AudioSource AS;
 
     private void Start()
     {
-        AS = GOambianceSource.GetComponent<AudioSource>();
+        var inst = PauseMenuController.instance;
+        AS = inst.GetComponent<AudioSource>();
         newAmbianceMusic.LoadAudioData();
     }
 
