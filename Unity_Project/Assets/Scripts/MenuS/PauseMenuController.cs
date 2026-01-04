@@ -13,7 +13,7 @@ public class PauseMenuController : MenuController
     [SerializeField] private AudioClip theme;
     private AudioSource audioSource;
     private bool doWeReadManual = false;
-
+    private bool isCutsceneActive = false;
     private void Awake()
     {
         if (instance == null)
@@ -69,8 +69,48 @@ public class PauseMenuController : MenuController
         {
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
-            if(!isJumpscareActive)
+            if(!isJumpscareActive && !isCutsceneActive)
                 audioSource.Play();
+        }
+    }
+    public void StopMusicForCutscene()
+    {
+        isCutsceneActive = true; 
+        if (audioSource != null)
+        {
+            audioSource.Stop();
+        }
+    }
+    public void StartCutsceneMode()
+    {
+        isCutsceneActive = true; // Bloque la touche Echap
+
+        // 1. On coupe la musique
+        if (audioSource != null)
+        {
+            audioSource.Stop();
+        }
+
+        // 2. On s'assure que le menu pause est fermé (sécurité)
+        if (GameIsPaused)
+        {
+            TogglePauseMenu(); // Ferme le menu si le joueur l'avait laissé ouvert
+        }
+
+        // 3. On cache le curseur pour l'immersion
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+
+    // Appelle ça à la fin de la Timeline (si le jeu continue après)
+    public void EndCutsceneMode()
+    {
+        isCutsceneActive = false; // Débloque la touche Echap
+
+        // On relance la musique si besoin
+        if (!GameIsPaused && audioSource != null)
+        {
+            audioSource.Play();
         }
     }
 
