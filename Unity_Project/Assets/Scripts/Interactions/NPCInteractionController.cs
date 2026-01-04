@@ -2,6 +2,7 @@ using KeySystem;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Playables;
 
@@ -13,12 +14,13 @@ public class NPCInteractionController : ObjectInteractionController
     // This method will be called when the player interacts with the NPC
     // It will play a sound and log a message to the console
     [Header("Spawn Fragment Settings")]
-    [Space(32)]
+    [Space(16)]
+    [SerializeField] private Transform parentSpawnLocation;
     [SerializeField] private GameObject[] spawnLocation;
     [SerializeField] private GameObject fragmentToSpawn;
     [SerializeField] private int numberToSpawn;
     [Header("Final phase of the game Settings")]
-    [Space(32)]
+    [Space(16)]
 
     [SerializeField] private GameObject showFinalKeyUI = null;
     [SerializeField] private GameObject finalkey;
@@ -28,6 +30,31 @@ public class NPCInteractionController : ObjectInteractionController
     public static int numberToCollect = 5;
     private int[] randomIndex;
     private bool isSpawned = false;
+
+    [ContextMenu("Remplir la liste Auto")] // Crée l'option dans le menu
+    void AutoFillSpawnPoints()
+    {
+        // 1. Détermine qui est le parent (soit une variable, soit l'objet lui-même)
+        Transform targetParent = parentSpawnLocation != null ? parentSpawnLocation : transform;
+
+        // 2. Crée une liste temporaire (plus facile à manipuler qu'un array)
+        List<GameObject> tempPoints = new List<GameObject>();
+
+        // 3. Boucle sur chaque enfant du parent
+        foreach (Transform child in targetParent)
+        {
+            // On évite de s'ajouter soi-même si le script est sur le parent
+            if (child != transform)
+            {
+                tempPoints.Add(child.gameObject);
+            }
+        }
+
+        // 4. Convertit la liste en tableau pour ta variable
+        spawnLocation = tempPoints.ToArray();
+
+        Debug.Log($"C'est fait ! {spawnLocation.Length} points de spawn trouvés.");
+    }
 
     /// <summary>
     /// Is called when clicked on
