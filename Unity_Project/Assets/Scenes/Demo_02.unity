@@ -5,11 +5,11 @@ OcclusionCullingSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_OcclusionBakeSettings:
-    smallestOccluder: 3
-    smallestHole: 0.25
+    smallestOccluder: 2
+    smallestHole: 0.5
     backfaceThreshold: 100
   m_SceneGUID: 208945cae6ce63c4b83b52ccf512d970
-  m_OcclusionCullingData: {fileID: 36300000, guid: 1b57135631088084abcae235cb920504, type: 2}
+  m_OcclusionCullingData: {fileID: 36300000, guid: 92ef18e39deb1a04e93cbc656530b765, type: 2}
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
@@ -77165,11 +77165,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1328382774509492, guid: 50c550383e7804046925df6c1f900f3b, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 84
       objectReference: {fileID: 0}
     - target: {fileID: 1408094875741630, guid: 50c550383e7804046925df6c1f900f3b, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 68
+      value: 84
       objectReference: {fileID: 0}
     - target: {fileID: 4424589433933364, guid: 50c550383e7804046925df6c1f900f3b, type: 3}
       propertyPath: m_RootOrder
@@ -97404,23 +97404,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1067755432591082, guid: 26de68c87dd3d1f40a63c993f62fb4a4, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 84
       objectReference: {fileID: 0}
     - target: {fileID: 1262060478001454, guid: 26de68c87dd3d1f40a63c993f62fb4a4, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 68
+      value: 84
       objectReference: {fileID: 0}
     - target: {fileID: 1463127815815648, guid: 26de68c87dd3d1f40a63c993f62fb4a4, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 84
       objectReference: {fileID: 0}
     - target: {fileID: 1544801320120194, guid: 26de68c87dd3d1f40a63c993f62fb4a4, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 84
       objectReference: {fileID: 0}
     - target: {fileID: 1581810261459166, guid: 26de68c87dd3d1f40a63c993f62fb4a4, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 68
+      value: 84
       objectReference: {fileID: 0}
     - target: {fileID: 4040333956886300, guid: 26de68c87dd3d1f40a63c993f62fb4a4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -171956,7 +171956,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "La cl\xE9 pour s'enfuir est apparue dans le grenier ! "
+  m_text: "La cl\xE9 pour s'enfuir est apparue dans quelque part dans la cave..."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -240598,11 +240598,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1328382774509492, guid: 50c550383e7804046925df6c1f900f3b, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 84
       objectReference: {fileID: 0}
     - target: {fileID: 1408094875741630, guid: 50c550383e7804046925df6c1f900f3b, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 68
+      value: 84
       objectReference: {fileID: 0}
     - target: {fileID: 4424589433933364, guid: 50c550383e7804046925df6c1f900f3b, type: 3}
       propertyPath: m_RootOrder
@@ -290723,31 +290723,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 544499384937604079, guid: f40aa017a6a3840418c58058d522e23f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 28.880186
+      value: 0.016
       objectReference: {fileID: 0}
     - target: {fileID: 544499384937604079, guid: f40aa017a6a3840418c58058d522e23f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.31
+      value: 0.088
       objectReference: {fileID: 0}
     - target: {fileID: 544499384937604079, guid: f40aa017a6a3840418c58058d522e23f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 23.15657
+      value: -0.128
       objectReference: {fileID: 0}
     - target: {fileID: 544499384937604079, guid: f40aa017a6a3840418c58058d522e23f, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.88374114
+      value: 0.9538744
       objectReference: {fileID: 0}
     - target: {fileID: 544499384937604079, guid: f40aa017a6a3840418c58058d522e23f, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: 0.0032515314
       objectReference: {fileID: 0}
     - target: {fileID: 544499384937604079, guid: f40aa017a6a3840418c58058d522e23f, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.46797606
+      value: 0.300184
       objectReference: {fileID: 0}
     - target: {fileID: 544499384937604079, guid: f40aa017a6a3840418c58058d522e23f, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0.001627872
       objectReference: {fileID: 0}
     - target: {fileID: 544499384937604079, guid: f40aa017a6a3840418c58058d522e23f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

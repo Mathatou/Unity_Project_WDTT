@@ -44,11 +44,13 @@ public class FlashLightController : ObjectInteractionController
     }
     private void activateTuto()
     {
-        tutoFlashLigth.gameObject.SetActive(true);
+        if (tutoFlashLigth != null)
+            tutoFlashLigth.gameObject.SetActive(true);
     }
     private void deactivateTuto()
     {
-        tutoFlashLigth.gameObject.SetActive(false);
+        if (tutoFlashLigth != null)
+            tutoFlashLigth.gameObject.SetActive(false);
     }
     private void grabFlashlight()
     {
