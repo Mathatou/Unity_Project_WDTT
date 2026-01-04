@@ -8610,7 +8610,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281348243
+    rgba: 3158163
   m_fontColor: {r: 0.5754717, g: 0.18729976, b: 0.18729976, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -131865,6 +131865,81 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4963403227186156, guid: 0fe0e783d777ad444b4a15328d824d20, type: 3}
   m_PrefabInstance: {fileID: 1575844972}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1575899940
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1575899943}
+  - component: {fileID: 1575899942}
+  - component: {fileID: 1575899941}
+  m_Layer: 0
+  m_Name: audio_relay
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1575899941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1575899940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e0fdd1044a96314ebd0879b5e3e5699, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1575899942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1575899940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Events:
+    m_Signals:
+    - {fileID: 11400000, guid: 10224c963d4097d4b81bdba088d85f24, type: 2}
+    m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1575899941}
+          m_TargetAssemblyTypeName: cutsceneRelay, Assembly-CSharp
+          m_MethodName: MuteMusicAndBlockPause
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!4 &1575899943
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1575899940}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.90428, y: 3.5976448, z: -4.563473}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1576342539
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -168467,6 +168542,8 @@ PlayableDirector:
     value: {fileID: 762410140}
   - key: {fileID: 8755563561875075371, guid: a61a0ffa78a281e4aa916adc5b58e36a, type: 2}
     value: {fileID: 119345902}
+  - key: {fileID: 3203156950821973656, guid: a61a0ffa78a281e4aa916adc5b58e36a, type: 2}
+    value: {fileID: 1575899942}
   m_ExposedReferences:
     m_References:
     - 6a70a088f60df3244a2f4d7e83fdff70: {fileID: 1563074193}
@@ -192469,3 +192546,4 @@ SceneRoots:
   - {fileID: 1659178026}
   - {fileID: 1149563865}
   - {fileID: 235552008}
+  - {fileID: 1575899943}
