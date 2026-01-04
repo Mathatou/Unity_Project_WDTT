@@ -53031,7 +53031,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Retrouve les fragments de ta m\xE9moire"
+  m_text: "Hahaha ! Trouve les gemmes que j'ai cach\xE9 pour t'\xE9chapper"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -53158,9 +53158,10 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: "Retrouve les fragments de ta m\xE9moire"
+            m_StringArgument: "Tu as r\xE9ussi \xE0 t'\xE9chapper de la prison de
+              ton bourreau "
             m_BoolArgument: 0
-          m_CallState: 2
+          m_CallState: 1
     - m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 359934186}
@@ -53172,9 +53173,10 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: "Ils sont \xE9parpill\xE9s un peu partout dans le manoir..."
+            m_StringArgument: "Mais arriveras-tu \xE0 t'\xE9chapper de ton esprit
+              ?"
             m_BoolArgument: 0
-          m_CallState: 2
+          m_CallState: 1
     - m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 359934186}
@@ -53186,10 +53188,10 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: Trouve les et tu pourras t'enfuir de cet endroit maudit
-              !
+            m_StringArgument: "Hahaha ! Trouve les gemmes que j'ai cach\xE9 pour
+              t'\xE9chapper"
             m_BoolArgument: 0
-          m_CallState: 2
+          m_CallState: 1
 --- !u!114 &359934186
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -148721,7 +148723,7 @@ PlayableDirector:
   m_GameObject: {fileID: 990908038}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: 410a686df83bc3548bc01c61fff1aa6a, type: 2}
+  m_PlayableAsset: {fileID: 11400000, guid: 0df5ccba66bd2d847a54ca3a791353cf, type: 2}
   m_InitialState: 0
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
@@ -148737,6 +148739,10 @@ PlayableDirector:
     value: {fileID: 1308132463689712701}
   - key: {fileID: -5693911000924541443, guid: 410a686df83bc3548bc01c61fff1aa6a, type: 2}
     value: {fileID: 1308132463689712701}
+  - key: {fileID: -934207004588505532, guid: 0df5ccba66bd2d847a54ca3a791353cf, type: 2}
+    value: {fileID: 1308132463689712701}
+  - key: {fileID: 165322186525206804, guid: 0df5ccba66bd2d847a54ca3a791353cf, type: 2}
+    value: {fileID: 359934180}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &990908040
@@ -220342,6 +220348,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4235337014125692, guid: 13bdc311b6e76ed438ee70b890f8da99, type: 3}
   m_PrefabInstance: {fileID: 1475130651}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1475505149
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1475505150}
+  m_Layer: 0
+  m_Name: finalTransform
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1475505150
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1475505149}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.5323412, y: -4.214279, z: -20.662504}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1475841660
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -290686,19 +290723,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 544499384937604079, guid: f40aa017a6a3840418c58058d522e23f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.878
+      value: 28.880186
       objectReference: {fileID: 0}
     - target: {fileID: 544499384937604079, guid: f40aa017a6a3840418c58058d522e23f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.457
+      value: 5.31
       objectReference: {fileID: 0}
     - target: {fileID: 544499384937604079, guid: f40aa017a6a3840418c58058d522e23f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.171
+      value: 23.15657
       objectReference: {fileID: 0}
     - target: {fileID: 544499384937604079, guid: f40aa017a6a3840418c58058d522e23f, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.922201
+      value: 0.88374114
       objectReference: {fileID: 0}
     - target: {fileID: 544499384937604079, guid: f40aa017a6a3840418c58058d522e23f, type: 3}
       propertyPath: m_LocalRotation.x
@@ -290706,7 +290743,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 544499384937604079, guid: f40aa017a6a3840418c58058d522e23f, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.38671103
+      value: 0.46797606
       objectReference: {fileID: 0}
     - target: {fileID: 544499384937604079, guid: f40aa017a6a3840418c58058d522e23f, type: 3}
       propertyPath: m_LocalRotation.z
@@ -290718,7 +290755,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 544499384937604079, guid: f40aa017a6a3840418c58058d522e23f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -45.5
+      value: 55.806
       objectReference: {fileID: 0}
     - target: {fileID: 544499384937604079, guid: f40aa017a6a3840418c58058d522e23f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -311803,7 +311840,6 @@ MonoBehaviour:
   - {fileID: 14470256}
   theKey: {fileID: 5845132295269690157}
   newAmbianceMusic: {fileID: 8300000, guid: e83f64e125e65134aa708a62b5bd587d, type: 3}
-  GOambianceSource: {fileID: 589782343}
 --- !u!65 &2089647278
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -322328,8 +322364,9 @@ MonoBehaviour:
   numberToSpawn: 12
   showFinalKeyUI: {fileID: 1140296900}
   finalkey: {fileID: 36046006}
-  finaltransform: {fileID: 16793793}
+  finaltransform: {fileID: 1475505149}
   waitTimer: 5
+  numbernecessary: 5
 --- !u!82 &1308132463689712701
 AudioSource:
   m_ObjectHideFlags: 0
@@ -340891,3 +340928,4 @@ SceneRoots:
   - {fileID: 592704354}
   - {fileID: 872596651}
   - {fileID: 1693686352}
+  - {fileID: 1475505150}
