@@ -165559,12 +165559,14 @@ PlayableDirector:
   m_DirectorUpdateMode: 1
   m_InitialTime: 0
   m_SceneBindings:
-  - key: {fileID: -1369443397798517873, guid: 1811f38c309fea44bbc18d4302e6ce2a, type: 2}
-    value: {fileID: 0}
   - key: {fileID: -814508198988824962, guid: 1811f38c309fea44bbc18d4302e6ce2a, type: 2}
     value: {fileID: 1204566111}
   - key: {fileID: -8487373173783066322, guid: 1811f38c309fea44bbc18d4302e6ce2a, type: 2}
     value: {fileID: 1204566111}
+  - key: {fileID: -9132092239040043654, guid: 1811f38c309fea44bbc18d4302e6ce2a, type: 2}
+    value: {fileID: 2063109156}
+  - key: {fileID: 9071797084329564577, guid: 1811f38c309fea44bbc18d4302e6ce2a, type: 2}
+    value: {fileID: 2098310917}
   m_ExposedReferences:
     m_References: []
 --- !u!114 &1107066618
@@ -305597,6 +305599,7 @@ GameObject:
   - component: {fileID: 2063109153}
   - component: {fileID: 2063109155}
   - component: {fileID: 2063109154}
+  - component: {fileID: 2063109156}
   m_Layer: 5
   m_Name: Eyelid_top
   m_TagString: Untagged
@@ -305661,6 +305664,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2063109152}
   m_CullTransparentMesh: 1
+--- !u!95 &2063109156
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2063109152}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &2063204484
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -310523,6 +310547,7 @@ GameObject:
   - component: {fileID: 2098310914}
   - component: {fileID: 2098310916}
   - component: {fileID: 2098310915}
+  - component: {fileID: 2098310917}
   m_Layer: 5
   m_Name: Eyelid_bottom
   m_TagString: Untagged
@@ -310587,6 +310612,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2098310913}
   m_CullTransparentMesh: 1
+--- !u!95 &2098310917
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2098310913}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &2098459256
 PrefabInstance:
   m_ObjectHideFlags: 0
