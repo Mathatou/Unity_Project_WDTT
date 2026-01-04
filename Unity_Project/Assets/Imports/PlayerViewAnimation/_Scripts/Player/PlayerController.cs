@@ -48,7 +48,19 @@ namespace UnityTutorial.PlayerControl
         private const float _walkSpeed = 2f;
         private const float _runSpeed = 6f;
         private Vector2 _currentVelocity;
-
+        public static PlayerController Instance { get; private set; }
+        private void Awake()
+        {
+            if (Instance == null)
+            {
+                Instance = this;
+                DontDestroyOnLoad(gameObject);
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
+        }
         private void Start()
         {
             // Cache component references
