@@ -165567,6 +165567,8 @@ PlayableDirector:
     value: {fileID: 2063109156}
   - key: {fileID: 9071797084329564577, guid: 1811f38c309fea44bbc18d4302e6ce2a, type: 2}
     value: {fileID: 2098310917}
+  - key: {fileID: 7077234030482453576, guid: 1811f38c309fea44bbc18d4302e6ce2a, type: 2}
+    value: {fileID: 1437137364}
   m_ExposedReferences:
     m_References: []
 --- !u!114 &1107066618
@@ -213623,6 +213625,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4176192035185304, guid: b3b3cb37ff0c0064094bfa7c2cf82672, type: 3}
   m_PrefabInstance: {fileID: 1436200213}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1437137364 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 331114514981880270, guid: f40aa017a6a3840418c58058d522e23f, type: 3}
+  m_PrefabInstance: {fileID: 1951321443}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1437501648
 PrefabInstance:
@@ -288268,6 +288275,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2082690978}
     m_Modifications:
+    - target: {fileID: 331114514981880270, guid: f40aa017a6a3840418c58058d522e23f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 544499384937604079, guid: f40aa017a6a3840418c58058d522e23f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
