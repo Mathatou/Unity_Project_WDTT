@@ -27,7 +27,7 @@ public class NPCInteractionController : ObjectInteractionController
     [SerializeField] private GameObject finaltransform;
     [SerializeField] private float waitTimer = 5.0f;
     
-    public static int numberToCollect = 5;
+    [SerializeField] public static int numberToCollect = 5;
     private int[] randomIndex;
     private bool isSpawned = false;
 
